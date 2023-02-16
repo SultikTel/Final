@@ -20,8 +20,6 @@ public class Player : MonoBehaviour
        float z = Input.GetAxis("Vertical");
        Vector3 move = new Vector3(x, 0, z);
        rb.velocity = move * speed;
-
-       
     }
     void OnCollisionEnter(Collision collision)
     {

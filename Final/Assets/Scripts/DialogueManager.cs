@@ -11,14 +11,36 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-    }
-    public void StartDialogue()
-    {
-        dialogue.text = sentences[index];
-
+        
     }
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetMouseButtonDown(0))
+        {
+            if(dialogue.text == sentences[index])
+            {
+                NextSentences();
+            }else 
+            dialogue.text = sentences[index];
+        }
+    }
+    public void StartDialogue()
+    {
+        dialogue.text = sentences[index];
+    }
+    public void NextSentences()
+    {
+         if(index < sentences.Length - 1)
+         {
+            index++;
+            dialogue.text = sentences[index];
+         }else {
+            gameObject.SetActive(false);
+         }
+    }
+    public void EndDialogue()
+    {
+        gameObject.SetActive(false);
     }
 }
