@@ -8,26 +8,30 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI dialogue;
     public string[] sentences;
     public int index;
+    public bool isActive = false;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameObject.SetActive(false);
     }
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
-        {
+         dialogue.text = sentences[index];
+        if(isActive){
+         if(Input.GetKeyDown(KeyCode.L))
+          {
             if(dialogue.text == sentences[index])
             {
                 NextSentences();
             }else 
             dialogue.text = sentences[index];
+          }
         }
     }
     public void StartDialogue()
     {
-        dialogue.text = sentences[index];
+        gameObject.SetActive(true);
     }
     public void NextSentences()
     {
@@ -37,10 +41,7 @@ public class DialogueManager : MonoBehaviour
             dialogue.text = sentences[index];
          }else {
             gameObject.SetActive(false);
+            index = 0;
          }
-    }
-    public void EndDialogue()
-    {
-        gameObject.SetActive(false);
     }
 }

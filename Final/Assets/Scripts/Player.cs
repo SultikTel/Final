@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
         if(collision.gameObject.tag == "soldier")
         {
             dialoguemanager.StartDialogue();
+            dialoguemanager.isActive = true;
         }
     }
 }

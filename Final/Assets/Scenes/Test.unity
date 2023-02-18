@@ -761,15 +761,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 1248210347}
-  name: {fileID: 0}
   sentences:
   - 'St.Rogers: HI'
   - 'Private Martin: hello'
-  - 'Caprian America: bye'
-  name_dialogue:
-  - St. Rodgers
-  - Private Martin
-  - Captian America
+  - 'Captian America: bye'
   index: 0
 --- !u!1 &1769000720
 GameObject:
@@ -786,7 +781,7 @@ GameObject:
   - component: {fileID: 1769000721}
   - component: {fileID: 1769000726}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
