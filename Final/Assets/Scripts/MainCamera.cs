@@ -22,7 +22,7 @@ public class MainCamera : MonoBehaviour
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
 
         xRotate = xRotate - mouseY;
-        xRotate = Mathf.Clamp(xRotate, -90f, 90f); //для ограничения угла поворота в пределах от -90 до 90 градусов.
+        xRotate = Mathf.Clamp(xRotate, -30f, 30f); //для ограничения угла поворота в пределах от -90 до 90 градусов.
 
         transform.localRotation = Quaternion.Euler(xRotate, 0, 0); //для поворота камеры вокруг оси X
         player.Rotate(Vector3.up * mouseX); //для поворота игрока вокруг оси Y используя входные данные от мыши MouseY

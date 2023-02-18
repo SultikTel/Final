@@ -5,8 +5,10 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public int speed;
+    public GameObject targetActive;
     public Rigidbody rb;
     public DialogueManager dialoguemanager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,12 @@ public class Player : MonoBehaviour
        float z = Input.GetAxis("Vertical");
        Vector3 move = new Vector3(x, 0, z);
        rb.velocity = move * speed;
+
+       //Active target img
+       if(Input.GetKeyDown(KeyCode.F))
+       {
+          targetActive.SetActive(true);
+       }
     }
     void OnCollisionEnter(Collision collision)
     {
