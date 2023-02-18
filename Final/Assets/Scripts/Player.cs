@@ -5,13 +5,14 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float speed;
+    public float JumpForce;
     public GameObject targetActive;
     public Rigidbody rb;
     public DialogueManager dialoguemanager;
-
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -27,6 +28,11 @@ public class Player : MonoBehaviour
        if(Input.GetKeyDown(KeyCode.F))
        {
           targetActive.SetActive(true);
+       }
+
+       if(Input.GetKeyDown(KeyCode.Space))
+       {
+          rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
        }
     }
     void OnCollisionEnter(Collision collision)

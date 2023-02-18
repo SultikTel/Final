@@ -14,6 +14,7 @@ public class gun : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         fire.Stop();
     }
     // Update is called once per frame
@@ -45,7 +46,7 @@ public class gun : MonoBehaviour
             
             if(hit.rigidbody != null)
             {
-                hit.rigidbody.AddForce(-hit.normal);
+                hit.rigidbody.AddForce(-hit.normal * 50);
             }
             GameObject impact_clone = Instantiate(bullet_impact, hit.point, Quaternion.LookRotation(hit.normal));
             Destroy(impact_clone, 1.5f);   
