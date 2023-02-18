@@ -17,7 +17,7 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         dialogue.text = sentences[index];
+        dialogue.text = sentences[index];
         if(isActive){
          if(Input.GetKeyDown(KeyCode.L))
           {

@@ -7,7 +7,7 @@ public class gun : MonoBehaviour
     public Animator animator;
     public Camera MainCamera;
     public ParticleSystem fire;
-    public ParticleSystem bullet_impact;
+    public GameObject bullet_impact;
     public AudioClip sound;
     //other scripts
     public GameManager gm;
@@ -42,8 +42,13 @@ public class gun : MonoBehaviour
         if(Physics.Raycast(MainCamera.transform.position, MainCamera.transform.forward, out hit, 100))
         {
             Debug.Log(hit.transform.name);
-
-            Instantiate(bullet_impact, hit.point, Quaternion.LookRotation(hit.normal));
+            
+            if(hit.rigidbody != null)
+            {
+                hit.rigidbody.AddForce(-hit.normal);
+            }
+            GameObject impact_clone = Instantiate(bullet_impact, hit.point, Quaternion.LookRotation(hit.normal));
+            Destroy(impact_clone, 1.5f);   
         }
     }
 }

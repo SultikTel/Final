@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int speed;
+    public float speed;
     public GameObject targetActive;
     public Rigidbody rb;
     public DialogueManager dialoguemanager;
@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
        float x = Input.GetAxis("Horizontal");
        float z = Input.GetAxis("Vertical");
        Vector3 move = new Vector3(x, 0, z);
-       rb.velocity = move * speed;
+       transform.Translate(move * speed);
 
        //Active target img
        if(Input.GetKeyDown(KeyCode.F))
