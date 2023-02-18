@@ -12,7 +12,6 @@ public class MainCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Cursor.LockState = CursorLockMode.locked;
     }
 
     // Update is called once per frame
@@ -22,9 +21,9 @@ public class MainCamera : MonoBehaviour
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
 
         xRotate = xRotate - mouseY;
-        xRotate = Mathf.Clamp(xRotate, -30f, 30f); //для ограничения угла поворота в пределах от -90 до 90 градусов.
+        xRotate = Mathf.Clamp(xRotate, -30f, 30f); //для ограничения угла поворота в пределах от -30 до 30 градусов.
 
-        transform.localRotation = Quaternion.Euler(xRotate, 0, 0); //для поворота камеры вокруг оси X
+        transform.localRotation = Quaternion.Euler(xRotate, 0, 0); //для поворота камер вокруг оси X
         player.Rotate(Vector3.up * mouseX); //для поворота игрока вокруг оси Y используя входные данные от мыши MouseY
 
     }
