@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class gun : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class gun : MonoBehaviour
     public GameObject bullet_impact;
     public AudioClip sound;
     public AudioClip sound2;
+    public GameObject message1;
+    public int current_ammo;
+    public int max_ammo = 5;
+    private bool isReloading = false;
     //other scripts
     public GameManager gm;
     // Start is called before the first frame update
@@ -17,13 +22,16 @@ public class gun : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         fire.Stop();
+        message1.SetActive(false);
+        current_ammo = max_ammo;
     }
     // Update is called once per frame
     void Update()
     {
         //shoot
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && current_ammo > 0)
         {
+            current_ammo -= 1;
             Shoot(); //Active shoot function
             fire.Play(); //particle system fire
             gm.PlaySound(sound); // sound while shooting
@@ -33,12 +41,17 @@ public class gun : MonoBehaviour
         {
             animator.SetBool("shoot", false);
         }
+
         //Reload
-        if(Input.GetKeyDown(KeyCode.R)) 
+        if(isReloading) 
+           return;
+        if(current_ammo == 0) 
         {
-            animator.SetBool("reload", true);
-            gm.PlaySound(sound2);
+            StartCoroutine(Reloading());
+            return;
+            //gm.PlaySound(sound2);
         }
+
         //walking
         if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
@@ -54,6 +67,9 @@ public class gun : MonoBehaviour
        if(Input.GetMouseButtonUp(1)){
           MainCamera.fieldOfView = 71;
        }
+
+       // UI text
+     
     }
     void Shoot()
     {
@@ -69,5 +85,18 @@ public class gun : MonoBehaviour
             GameObject impact_clone = Instantiate(bullet_impact, hit.point, Quaternion.LookRotation(hit.normal));
             Destroy(impact_clone, 1.5f);   
         }
+    }
+
+    IEnumerator Reloading()
+    {
+        isReloading = true;
+        message1.SetActive(true);
+        print("Reloading...");
+        animator.SetBool("reload", true);
+        yield return new WaitForSeconds(3f);
+        current_ammo = max_ammo;
+        animator.SetBool("reload", false);
+        message1.SetActive(false);
+        isReloading = false;
     }
 }

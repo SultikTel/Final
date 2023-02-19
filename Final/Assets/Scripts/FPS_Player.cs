@@ -1,14 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class FPS_Player : MonoBehaviour
 {
     public float speed;
     bool isGrounded;
     public float jumpForce;
-    public GameObject aimActive;
     Rigidbody rb;
     public DialogueManager dialoguemanager;
     // Start is called before the first frame update
@@ -16,16 +14,11 @@ public class FPS_Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();   
         isGrounded = false;    
-        aimActive.SetActive(false); 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F))
-        {
-            aimActive.SetActive(true);
-        }
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded == false)
         {
             rb.AddForce(new Vector3(0, 3f, 0));
