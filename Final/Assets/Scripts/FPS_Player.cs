@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FPS_Player : MonoBehaviour
 {
@@ -24,12 +25,6 @@ public class FPS_Player : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.F))
         {
             aimActive.SetActive(true);
-        }
-        if(Input.GetMouseButtonDown(0))
-        {
-            //anim
-            //playsound
-            print("worked");
         }
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded == false)
         {
