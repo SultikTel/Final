@@ -11,6 +11,7 @@ public class gun : MonoBehaviour
     public GameObject bullet_impact;
     public AudioClip sound;
     public AudioClip sound2;
+    public AudioSource walking_sound;
     public GameObject message1;
     public int current_ammo;
     public int max_ammo = 5;
@@ -56,6 +57,7 @@ public class gun : MonoBehaviour
         if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
             animator.SetBool("walking", true);
+            //walking_sound.Play();
         }else {
             animator.SetBool("walking", false);
         }
