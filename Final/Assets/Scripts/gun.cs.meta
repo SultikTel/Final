@@ -3,7 +3,14 @@ guid: cac20ba9275aae3498056792fa319e7e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - animator: {instanceID: 0}
+  - MainCamera: {instanceID: 0}
+  - fire: {instanceID: 0}
+  - bullet_impact: {fileID: 100002, guid: 3b1fe0d0dc796bf46b1460e5a70bd078, type: 3}
+  - sound: {instanceID: 0}
+  - sound2: {instanceID: 0}
+  - gm: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
