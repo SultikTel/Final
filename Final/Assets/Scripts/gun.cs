@@ -48,9 +48,9 @@ public class gun : MonoBehaviour
            return;
         if(current_ammo == 0) 
         {
+            PlaySoundReload();
             StartCoroutine(Reloading());
             return;
-            //gm.PlaySound(sound2);
         }
 
         //walking
@@ -88,7 +88,10 @@ public class gun : MonoBehaviour
             Destroy(impact_clone, 1.5f);   
         }
     }
-
+    void PlaySoundReload()
+    {
+        gm.PlaySound(sound2);
+    }
     IEnumerator Reloading()
     {
         isReloading = true;
