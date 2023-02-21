@@ -13,16 +13,16 @@ public class FPS_Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();   
-        isGrounded = false;    
+        isGrounded = true;    
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded == false)
+        if(Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
-            rb.AddForce(new Vector3(0, 3f, 0));
-            isGrounded = true;
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isGrounded = false;
         }
     }
     void FixedUpdate()
@@ -34,7 +34,7 @@ public class FPS_Player : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
-        isGrounded = false;
+        isGrounded = true;
 
         if(collision.gameObject.tag == "soldier")
         {
