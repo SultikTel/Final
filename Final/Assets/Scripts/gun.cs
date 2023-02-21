@@ -15,9 +15,13 @@ public class gun : MonoBehaviour
     public GameObject message1;
     public int current_ammo;
     public int max_ammo = 5;
+    public float damage;
     private bool isReloading = false;
+
+    public GameObject npc;
     //other scripts
     public GameManager gm;
+    //public Target target;
     // Start is called before the first frame update
     void Start()
     {
@@ -79,6 +83,11 @@ public class gun : MonoBehaviour
         if(Physics.Raycast(MainCamera.transform.position, MainCamera.transform.forward, out hit, 100))
         {
             Debug.Log(hit.transform.name);
+            Target target = hit.transform.GetComponent<Target>();
+            if(target != null)
+            {
+                target.TakeDamage(damage);
+            }
             
             if(hit.rigidbody != null)
             {
