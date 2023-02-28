@@ -80,7 +80,7 @@ public class MenuController : MonoBehaviour
     
     public void NewGameDialogYes()
     {
-        SceneManager.LoadScene(_newGameLevel);
+        SceneManager.LoadScene(1);
     }
     
     public void LoadGameDialogYes()
@@ -132,11 +132,11 @@ public class MenuController : MonoBehaviour
         StartCoroutine(ConfirmationBox());
     }
 
-    public void SetBrightness(float brightness)
+   /* public void SetBrightness(float brightness)
     {
         _brightnessLevel = brightness;
         brightnessTextValue.text = brightness.ToString("0.0");
-    }
+    }*/
 
     public void SetFullScreen(bool isFullScreen)
     {
