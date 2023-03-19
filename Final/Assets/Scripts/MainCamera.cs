@@ -26,5 +26,6 @@ public class MainCamera : MonoBehaviour
         transform.localRotation = Quaternion.Euler(xRotate, 0, 0); //для поворота камер вокруг оси X
         player.Rotate(Vector3.up * mouseX); //для поворота игрока вокруг оси Y используя входные данные от мыши MouseY
 
+        
     }
 }

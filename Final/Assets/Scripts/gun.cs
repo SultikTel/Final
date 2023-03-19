@@ -54,7 +54,7 @@ public class gun : MonoBehaviour
             return;
         }
 
-        //walking
+        //walking animation
         if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
             animator.SetBool("walking", true);
@@ -63,18 +63,16 @@ public class gun : MonoBehaviour
             animator.SetBool("walking", false);
         }
 
-       //Aim
+       //Aim animation
        if(Input.GetMouseButtonDown(1)){
-          MainCamera.fieldOfView = 51;
-          animator.SetBool("aim", true);
+          MainCamera.fieldOfView = 41;
+          //animator.SetBool("aim", true);
        }else {
-        animator.SetBool("aim", false);
+          //animator.SetBool("aim", false);
        }
        if(Input.GetMouseButtonUp(1)){
           MainCamera.fieldOfView = 71;
        }
-
-       // UI text
      
     }
     void Shoot()
@@ -82,7 +80,7 @@ public class gun : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(MainCamera.transform.position, MainCamera.transform.forward, out hit, 100))
         {
-            Debug.Log(hit.transform.name);
+            //Debug.Log(hit.transform.name);
             
             Target target = hit.transform.GetComponent<Target>();
             if(target != null)
@@ -106,7 +104,6 @@ public class gun : MonoBehaviour
     {
         isReloading = true;
         message1.SetActive(true);
-        print("Reloading...");
         animator.SetBool("reload", true);
         yield return new WaitForSeconds(3f);
         current_ammo = max_ammo;
