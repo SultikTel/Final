@@ -66,6 +66,9 @@ public class gun : MonoBehaviour
        //Aim
        if(Input.GetMouseButtonDown(1)){
           MainCamera.fieldOfView = 51;
+          animator.SetBool("aim", true);
+       }else {
+        animator.SetBool("aim", false);
        }
        if(Input.GetMouseButtonUp(1)){
           MainCamera.fieldOfView = 71;
