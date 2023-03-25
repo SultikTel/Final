@@ -64,7 +64,7 @@ public class New_Fps : MonoBehaviour
         controller.Move(move * speed * Time.deltaTime);
         */
         //SitDown
-        if(Input.GetKey(KeyCode.LeftControl))
+        if(Input.GetKey(KeyCode.C))
         {
             controller.height = 1f;
             cam.transform.localPosition = new Vector3(0, -0.36f, 0);

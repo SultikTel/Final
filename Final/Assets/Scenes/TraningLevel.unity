@@ -995,8 +995,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 44510174}
-  m_LocalRotation: {x: -0, y: -0.81120265, z: -0, w: -0.5847652}
-  m_LocalPosition: {x: -9.463493, y: 1.62, z: 31.984787}
+  m_LocalRotation: {x: 0.039261356, y: -0.80713356, z: 0.07005183, w: -0.5848818}
+  m_LocalPosition: {x: -9.48, y: 1.12, z: 32.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 44087284}
@@ -1009,7 +1009,7 @@ Transform:
   - {fileID: 44087292}
   m_Father: {fileID: 1054234877}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: -71.573006, z: 0}
+  m_LocalEulerAnglesHint: {x: 3.851, y: 107.86101, z: -8.375}
 --- !u!54 &44477814
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6423,8 +6423,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 864621095}
-  m_LocalRotation: {x: -0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: -45.094597, y: 8.88, z: -77.3464}
+  m_LocalRotation: {x: 0, y: -0.99481857, z: 0.10166619, w: 0}
+  m_LocalPosition: {x: 3.9000015, y: 1.69, z: 28.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 864980493}
@@ -6436,7 +6436,7 @@ Transform:
   - {fileID: 864980485}
   m_Father: {fileID: 1054234877}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 11.670001, y: -179.99998, z: 0}
 --- !u!4 &864980489
 Transform:
   m_ObjectHideFlags: 0
@@ -8169,7 +8169,7 @@ GameObject:
   - component: {fileID: 1072421314}
   - component: {fileID: 1072421316}
   - component: {fileID: 1072421315}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Terrain_0_0_0984c43a-8830-4108-848b-774fc2b518e3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13626,7 +13626,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &2115056440
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33882,7 +33882,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.14
-  m_Height: 1.64
+  m_Height: 2.79
   m_Direction: 1
   m_Center: {x: 0, y: 0.51, z: 0}
 --- !u!114 &6948273748693890113
@@ -33923,7 +33923,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -38588,7 +38588,7 @@ CharacterController:
   serializedVersion: 2
   m_Height: 2
   m_Radius: 0.5
-  m_SlopeLimit: 45
+  m_SlopeLimit: 90
   m_StepOffset: 0.6
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
@@ -38607,7 +38607,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpHeight: 5
-  jumpTime: 5
+  jumpTime: 0.5
   groundDistance: 0.2
   groundMask:
     serializedVersion: 2
@@ -38624,7 +38624,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8614223772741766415}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 81.37, y: 0.96, z: 36.748974}
+  m_LocalPosition: {x: 81.37, y: 1.59, z: 36.748974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1475080993141801360}
