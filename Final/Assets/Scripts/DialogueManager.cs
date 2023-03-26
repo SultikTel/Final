@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-    public TextMeshProUGUI dialogue;
+    public Text dialogue;
     public string[] sentences;
     public int index;
     public bool isActive = false;
