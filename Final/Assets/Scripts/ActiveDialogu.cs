@@ -11,6 +11,7 @@ public class ActiveDialogu : MonoBehaviour
         {
             dialogue.StartDialogue();
             dialogue.isActive = true;
+            this.gameObject.SetActive(false);
         }
     }
 }

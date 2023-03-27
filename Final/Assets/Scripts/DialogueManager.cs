@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour
     public string[] sentences;
     public int index;
     public bool isActive = false;
+    public GameObject ActiveDialogueCollider;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +44,7 @@ public class DialogueManager : MonoBehaviour
          }else {
             gameObject.SetActive(false);
             index = 0;
+            ActiveDialogueCollider.SetActive(true);
          }
     }
 }
