@@ -16,10 +16,15 @@ public class New_Fps : MonoBehaviour
     private Vector3 velocity;
     public Transform G_O;
     public Camera cam;
+    public Animator animator;
+    public GameObject Enemy_soldier;
+    public int Maxhealth = 100;
+    public int currentHealth;
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentHealth = Maxhealth;
+        animator = Enemy_soldier.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -28,7 +33,7 @@ public class New_Fps : MonoBehaviour
         // Проверяем, находится ли объект на земле
         bool isGrounded = Physics.CheckSphere(G_O.position, groundDistance, groundMask);
 
-        // Если объект на земле, то сбрасываем скорость прыжка и устанавливаем флаг isJumping в false
+        // Если объект на земле, то сбрасываем скорость прыжка и устанавливаем isJumping в false
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
@@ -58,11 +63,6 @@ public class New_Fps : MonoBehaviour
         // Применяем гравитацию к объекту
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
-        /*float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-        Vector3 move = transform.right * x + transform.forward * z;
-        controller.Move(move * speed * Time.deltaTime);
-        */
         //SitDown
         if(Input.GetKey(KeyCode.C))
         {
@@ -71,6 +71,25 @@ public class New_Fps : MonoBehaviour
         }else {
             controller.height = 2f;
              cam.transform.localPosition = new Vector3(0, 0.2367195f, 0);
+        }
+
+        Ray ray = new Ray(transform.position, transform.forward);
+
+        if(Physics.Raycast(ray, out RaycastHit hit, 10f)){
+            if(hit.collider.CompareTag("Enemy"))
+            {
+                animator.SetBool("shoot_enemy", true);
+                TakeDamage(20);
+            }else 
+            animator.SetBool("shoot_enemy", false);
+        }
+
+    }
+    public void TakeDamage(int damageAmount)
+    {
+        currentHealth -= damageAmount;
+        if(currentHealth <= 0){
+            print("Игрок умер");
         }
     }
 }
