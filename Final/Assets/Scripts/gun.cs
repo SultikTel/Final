@@ -81,7 +81,17 @@ public class gun : MonoBehaviour
         if(Physics.Raycast(MainCamera.transform.position, MainCamera.transform.forward, out hit, 100))
         {
             Debug.Log(hit.transform.name);
-            
+
+            //отсюда изменения делал султан
+
+            EnemyBySultan enemyBySultan = hit.collider.GetComponent<EnemyBySultan>();
+            if (enemyBySultan != null)
+            {
+                enemyBySultan.die();
+            }
+
+            //тут закончил 
+
             Target target = hit.transform.GetComponent<Target>();
             if(target != null)
             {
