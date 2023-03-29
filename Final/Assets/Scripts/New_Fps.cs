@@ -20,10 +20,12 @@ public class New_Fps : MonoBehaviour
     public GameObject Enemy_soldier;
     public int Maxhealth = 100;
     public int currentHealth;
+    public HealthBar hb;
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = Maxhealth;
+        hb.SetMaxHealth(Maxhealth);
         animator = Enemy_soldier.GetComponent<Animator>();
     }
 
@@ -75,11 +77,11 @@ public class New_Fps : MonoBehaviour
 
         Ray ray = new Ray(transform.position, transform.forward);
 
-        if(Physics.Raycast(ray, out RaycastHit hit, 10f)){
+        if(Physics.Raycast(ray, out RaycastHit hit, 50f)){
             if(hit.collider.CompareTag("Enemy"))
             {
                 animator.SetBool("shoot_enemy", true);
-                TakeDamage(20);
+                TakeDamage(5);
             }else 
             animator.SetBool("shoot_enemy", false);
         }
@@ -88,6 +90,7 @@ public class New_Fps : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount;
+        hb.SetHealth(currentHealth);
         if(currentHealth <= 0){
             print("Игрок умер");
         }
