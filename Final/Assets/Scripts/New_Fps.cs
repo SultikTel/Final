@@ -16,6 +16,9 @@ public class New_Fps : MonoBehaviour
     private Vector3 velocity;
     public Transform G_O;
     public Camera cam;
+
+    public AudioClip clip;
+    public GameManager gm;
     public Animator animator;
     public GameObject Enemy_soldier;
     public int Maxhealth = 100;
@@ -82,6 +85,7 @@ public class New_Fps : MonoBehaviour
             {
                 animator.SetBool("shoot_enemy", true);
                 TakeDamage(5);
+                gm.PlaySound(clip);
             }else 
             animator.SetBool("shoot_enemy", false);
         }

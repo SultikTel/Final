@@ -2097,7 +2097,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5768065970422187744}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 81.37, y: 13.31, z: 118.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2148,11 +2148,14 @@ MonoBehaviour:
   controller: {fileID: 5768065970422187757}
   G_O: {fileID: 5182145327090457877}
   cam: {fileID: 3910305906623002268}
+  clip: {fileID: 8300000, guid: 4e6ad2f800f9cf44fa700763f6d14fd1, type: 3}
+  gm: {fileID: 0}
   animator: {fileID: 5768065970422187775}
   Enemy_soldier: {fileID: 5496932938533447279, guid: a45b092d84a3a4040ae7a8ca68d87727,
     type: 3}
   Maxhealth: 100
   currentHealth: 0
+  hb: {fileID: 0}
 --- !u!95 &5768065970422187775
 Animator:
   serializedVersion: 3

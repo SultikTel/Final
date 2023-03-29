@@ -15,7 +15,7 @@ public class gun : MonoBehaviour
     public GameObject message1;
     public int current_ammo;
     public int max_ammo = 5;
-    public float damage;
+    public int damage;
     private bool isReloading = false;
     //other scripts
     public GameManager gm;
@@ -96,6 +96,11 @@ public class gun : MonoBehaviour
             if(target != null)
             {
                 target.TakeDamage(damage);
+            }
+            GermanSoldier germansoldier = hit.transform.GetComponent<GermanSoldier>();
+            if(germansoldier != null)
+            {
+                germansoldier.TakeDamage(damage);
             }
             
             if(hit.rigidbody != null)
