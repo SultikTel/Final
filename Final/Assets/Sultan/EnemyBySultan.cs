@@ -7,6 +7,9 @@ public class EnemyBySultan : MonoBehaviour
     [SerializeField]
     public bool isFirstwave;
 
+    public GameObject German_Ragdoll;
+    public int health = 50;
+
     public LevelGoing lvl;
 
     void Start()
@@ -30,7 +33,20 @@ public class EnemyBySultan : MonoBehaviour
     {
         getFade();
         lvl.EnemyDown();
-        
+
+        this.gameObject.SetActive(false);
+        German_Ragdoll.SetActive(true);
+        Instantiate(German_Ragdoll, transform.position, transform.rotation);
+
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        if (health == 0)
+        {
+            die();
+        }
     }
 
 
