@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0060138176, g: 0.06016229, b: 0.19518855, a: 1}
+  m_IndirectSpecularColor: {r: 0.005982376, g: 0.06013626, b: 0.1950731, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2469,6 +2469,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFirstwave: 1
+  German_Ragdoll: {fileID: 0}
+  health: 50
   lvl: {fileID: 0}
 --- !u!65 &352204401
 BoxCollider:
@@ -2849,6 +2851,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 4627615516384261885}
   - {fileID: 1879728186}
   - {fileID: 1253771217}
   m_Father: {fileID: 0}
@@ -4256,8 +4259,8 @@ MonoBehaviour:
   German_Ragdoll: {fileID: 7132103737116048615, guid: 4e7b27d9d077fdd42a00166825713350,
     type: 3}
   health: 50
-  isFirstwave: 1
-  lvl: {fileID: 0}
+  win_text: {fileID: 0}
+  button: {fileID: 0}
 --- !u!114 &592064283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4304,7 +4307,7 @@ Transform:
   - {fileID: 1441353828}
   - {fileID: 190227333}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1001 &594007171
 PrefabInstance:
@@ -6733,6 +6736,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFirstwave: 0
+  German_Ragdoll: {fileID: 0}
+  health: 50
   lvl: {fileID: 0}
 --- !u!65 &892506771
 BoxCollider:
@@ -8842,8 +8847,8 @@ MonoBehaviour:
   German_Ragdoll: {fileID: 7132103737116048615, guid: 4e7b27d9d077fdd42a00166825713350,
     type: 3}
   health: 50
-  isFirstwave: 1
-  lvl: {fileID: 0}
+  win_text: {fileID: 0}
+  button: {fileID: 0}
 --- !u!114 &1210727240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8890,7 +8895,7 @@ Transform:
   - {fileID: 605255729}
   - {fileID: 1953536906}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1211046739
 GameObject:
@@ -9105,7 +9110,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 399754715}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9948,8 +9953,8 @@ MonoBehaviour:
   German_Ragdoll: {fileID: 7132103737116048615, guid: 4e7b27d9d077fdd42a00166825713350,
     type: 3}
   health: 50
-  isFirstwave: 0
-  lvl: {fileID: 0}
+  win_text: {fileID: 0}
+  button: {fileID: 0}
 --- !u!114 &1379041183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9996,7 +10001,7 @@ Transform:
   - {fileID: 618148086}
   - {fileID: 877071558}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1385955412
 GameObject:
@@ -11076,8 +11081,8 @@ MonoBehaviour:
   German_Ragdoll: {fileID: 7132103737116048615, guid: 4e7b27d9d077fdd42a00166825713350,
     type: 3}
   health: 50
-  isFirstwave: 0
-  lvl: {fileID: 0}
+  win_text: {fileID: 0}
+  button: {fileID: 0}
 --- !u!114 &1548703958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11124,7 +11129,7 @@ Transform:
   - {fileID: 224956176}
   - {fileID: 1577528291}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1552036266
 GameObject:
@@ -11925,105 +11930,6 @@ Transform:
   m_Father: {fileID: 1104366145}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1649668181
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1649668185}
-  - component: {fileID: 1649668184}
-  - component: {fileID: 1649668183}
-  - component: {fileID: 1649668182}
-  m_Layer: 5
-  m_Name: Canvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1649668182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649668181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &1649668183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649668181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
---- !u!223 &1649668184
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649668181}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!224 &1649668185
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649668181}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 4627615516384261885}
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1653793992
 GameObject:
   m_ObjectHideFlags: 0
@@ -13396,6 +13302,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFirstwave: 1
+  German_Ragdoll: {fileID: 0}
+  health: 50
   lvl: {fileID: 0}
 --- !u!65 &1857460545
 BoxCollider:
@@ -13594,7 +13502,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 399754715}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15607,7 +15515,7 @@ RectTransform:
   - {fileID: 4627615515505484954}
   - {fileID: 4627615516783664784}
   - {fileID: 4627615516941993706}
-  m_Father: {fileID: 1649668185}
+  m_Father: {fileID: 399754715}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
