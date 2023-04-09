@@ -844,6 +844,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8028086132293555695}
   - component: {fileID: 6712115128836219299}
+  - component: {fileID: 5531855505295044361}
   m_Layer: 0
   m_Name: Cylinder.023
   m_TagString: Untagged
@@ -926,6 +927,22 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.00004157168, y: 0.0044535184, z: -0.00035670982}
     m_Extent: {x: 0.0025547536, y: 0.0042378763, z: 0.0022747146}
   m_DirtyAABB: 0
+--- !u!54 &5531855505295044361
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3895872831679851257}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4017785981577969381
 GameObject:
   m_ObjectHideFlags: 0
@@ -998,6 +1015,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3413155244737572016}
   - component: {fileID: 1101522126988699312}
+  - component: {fileID: 5080493065975149640}
   m_Layer: 0
   m_Name: BlendMann.003
   m_TagString: Untagged
@@ -1111,6 +1129,22 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0000146362, y: 0.002213334, z: 0.0007098684}
     m_Extent: {x: 0.010532582, y: 0.0025380885, z: 0.0018046211}
   m_DirtyAABB: 0
+--- !u!54 &5080493065975149640
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4347235268717294006}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4686910768584753552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1744,6 +1778,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5389590172400000126}
   - component: {fileID: 4170393133470368970}
+  - component: {fileID: 2468123210681200127}
   m_Layer: 0
   m_Name: Cylinder.014
   m_TagString: Untagged
@@ -1818,6 +1853,22 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.000009689538, y: 0.0018215005, z: 0.0015554873}
     m_Extent: {x: 0.0005256114, y: 0.00017618615, z: 0.00014934601}
   m_DirtyAABB: 0
+--- !u!54 &2468123210681200127
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6383142242469914639}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6629075297008936799
 GameObject:
   m_ObjectHideFlags: 0
@@ -2115,6 +2166,9 @@ GameObject:
   - component: {fileID: 7938056146432931617}
   - component: {fileID: 7938056146432931646}
   - component: {fileID: 7938056146432931616}
+  - component: {fileID: 1512179193553924818}
+  - component: {fileID: 1512179193553924819}
+  - component: {fileID: 1512179193553924820}
   m_Layer: 0
   m_Name: german_soldier #3
   m_TagString: Enemy
@@ -2186,6 +2240,57 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.009
   m_Center: {x: 0, y: 0.009, z: 0}
+--- !u!114 &1512179193553924818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7938056146432931647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4839dd3203cabca42b32a5e95f4b1da9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  NPC_Ragdoll: {fileID: 885332317472108417, guid: 0834ae6af6e1e4b40958cb09a835432e,
+    type: 3}
+--- !u!195 &1512179193553924819
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7938056146432931647}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.005
+  m_Speed: 1
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.02
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &1512179193553924820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7938056146432931647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cedfd66b90ebb4e9a74757a077453e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  navmesh: {fileID: 1512179193553924819}
 --- !u!1 &8105842265207078275
 GameObject:
   m_ObjectHideFlags: 0
@@ -2259,6 +2364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7413408853082929130}
   - component: {fileID: 3019571463784097216}
+  - component: {fileID: 1029856293541254788}
   m_Layer: 0
   m_Name: Cylinder.049
   m_TagString: Untagged
@@ -2356,6 +2462,22 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.000065600034, y: -0.0029062452, z: 0.000002374407}
     m_Extent: {x: 0.008497799, y: 0.009604675, z: 0.003176295}
   m_DirtyAABB: 0
+--- !u!54 &1029856293541254788
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8403499341653939058}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8442192368923933413
 GameObject:
   m_ObjectHideFlags: 0
