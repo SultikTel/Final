@@ -10,6 +10,7 @@ public class LevelGoing : MonoBehaviour
     public int numEnemiesRightNow;
     public int waveRightNow;
     public Text text;
+    public Text tasks;
 
 
 
@@ -31,6 +32,8 @@ public class LevelGoing : MonoBehaviour
 
         enemiesRightNow = new ArrayList(FindObjectsOfType<EnemyBySultan>());
         numEnemiesRightNow = enemiesRightNow.Count;
+        tasks.text = "Очистить станцию" +
+           "\n"+ "Осталось врагов:" + numEnemiesRightNow.ToString();
     }
 
     // Update is called once per frame
