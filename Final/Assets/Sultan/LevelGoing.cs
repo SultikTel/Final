@@ -11,6 +11,7 @@ public class LevelGoing : MonoBehaviour
     public int waveRightNow;
     public Text text;
     public Text tasks;
+    public Text enemiesLeft;
 
 
 
@@ -32,8 +33,9 @@ public class LevelGoing : MonoBehaviour
 
         enemiesRightNow = new ArrayList(FindObjectsOfType<EnemyBySultan>());
         numEnemiesRightNow = enemiesRightNow.Count;
-        tasks.text = "Очистить станцию" +
-           "\n"+ "Осталось врагов:" + numEnemiesRightNow.ToString();
+        tasks.text = "Очистить станцию";
+        enemiesLeft.text= "Осталось врагов:" + numEnemiesRightNow.ToString();
+        
     }
 
     // Update is called once per frame
@@ -51,6 +53,8 @@ public class LevelGoing : MonoBehaviour
                 SecondWavePassed();
             }
         }
+
+        enemiesLeft.text = "Осталось врагов:" + numEnemiesRightNow.ToString();
 
     }
 
@@ -70,12 +74,16 @@ public class LevelGoing : MonoBehaviour
 
         ShowText("NeedToDef second wave");
         waveRightNow = 2;
+
+        tasks.text = "Очистить деревню";
+
     }
 
     public void SecondWavePassed()
     {
         ShowText("YouWon");
-        
+        tasks.text = "Заданий нет";
+        enemiesLeft.text = "";
     }
 
 

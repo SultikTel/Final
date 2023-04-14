@@ -2372,6 +2372,84 @@ Transform:
   m_Father: {fileID: 1517390212}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &301864961
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 301864962}
+  - component: {fileID: 301864964}
+  - component: {fileID: 301864963}
+  m_Layer: 5
+  m_Name: Text (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &301864962
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301864961}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1865359024}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -10.5}
+  m_SizeDelta: {x: 319.00708, y: 43.09268}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &301864963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301864961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.6862745, g: 0.3372549, b: 0.37647063, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 3
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &301864964
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301864961}
+  m_CullTransparentMesh: 0
 --- !u!1001 &313566618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4380,9 +4458,9 @@ GameObject:
   m_Component:
   - component: {fileID: 592064285}
   - component: {fileID: 592064284}
-  - component: {fileID: 592064283}
   - component: {fileID: 592064282}
   - component: {fileID: 592064281}
+  - component: {fileID: 592064283}
   m_Layer: 0
   m_Name: enemy_soldier (1)
   m_TagString: Enemy
@@ -4429,10 +4507,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 592064280}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3231593c64a644849ab30feb3c247e37, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d2416db309328548b98e46180494bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 976717926}
+  isFirstwave: 1
+  German_Ragdoll: {fileID: 7132103737116048615, guid: 4e7b27d9d077fdd42a00166825713350,
+    type: 3}
+  health: 50
+  lvl: {fileID: 0}
 --- !u!95 &592064284
 Animator:
   serializedVersion: 3
@@ -8615,6 +8697,7 @@ MonoBehaviour:
   waveRightNow: 0
   text: {fileID: 1253771218}
   tasks: {fileID: 1912492721}
+  enemiesLeft: {fileID: 301864963}
 --- !u!4 &1133909903
 Transform:
   m_ObjectHideFlags: 0
@@ -8852,8 +8935,8 @@ GameObject:
   - component: {fileID: 1210727242}
   - component: {fileID: 1210727241}
   - component: {fileID: 1210727240}
-  - component: {fileID: 1210727239}
   - component: {fileID: 1210727238}
+  - component: {fileID: 1210727239}
   m_Layer: 0
   m_Name: enemy_soldier
   m_TagString: Enemy
@@ -8883,14 +8966,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1210727237}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5548415f7c4be874f827fb16fc8d2ffe, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d2416db309328548b98e46180494bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFirstwave: 1
   German_Ragdoll: {fileID: 7132103737116048615, guid: 4e7b27d9d077fdd42a00166825713350,
     type: 3}
   health: 50
-  win_text: {fileID: 0}
-  button: {fileID: 0}
+  lvl: {fileID: 0}
 --- !u!114 &1210727240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9772,8 +9855,8 @@ GameObject:
   - component: {fileID: 1379041185}
   - component: {fileID: 1379041184}
   - component: {fileID: 1379041183}
-  - component: {fileID: 1379041182}
   - component: {fileID: 1379041181}
+  - component: {fileID: 1379041182}
   m_Layer: 0
   m_Name: enemy_soldier (3)
   m_TagString: Enemy
@@ -9803,14 +9886,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1379041180}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5548415f7c4be874f827fb16fc8d2ffe, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d2416db309328548b98e46180494bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFirstwave: 0
   German_Ragdoll: {fileID: 7132103737116048615, guid: 4e7b27d9d077fdd42a00166825713350,
     type: 3}
   health: 50
-  win_text: {fileID: 0}
-  button: {fileID: 0}
+  lvl: {fileID: 0}
 --- !u!114 &1379041183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11073,9 +11156,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1548703960}
   - component: {fileID: 1548703959}
-  - component: {fileID: 1548703958}
   - component: {fileID: 1548703957}
   - component: {fileID: 1548703956}
+  - component: {fileID: 1548703958}
   m_Layer: 0
   m_Name: enemy_soldier (2)
   m_TagString: Enemy
@@ -11122,10 +11205,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1548703955}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3231593c64a644849ab30feb3c247e37, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d2416db309328548b98e46180494bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 976717926}
+  isFirstwave: 0
+  German_Ragdoll: {fileID: 7132103737116048615, guid: 4e7b27d9d077fdd42a00166825713350,
+    type: 3}
+  health: 50
+  lvl: {fileID: 0}
 --- !u!95 &1548703959
 Animator:
   serializedVersion: 3
@@ -13242,6 +13329,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1912492720}
+  - {fileID: 301864962}
   m_Father: {fileID: 399754715}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13717,7 +13805,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -10.5}
+  m_AnchoredPosition: {x: 0, y: 9.6}
   m_SizeDelta: {x: 319.00708, y: 43.09268}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1912492721
