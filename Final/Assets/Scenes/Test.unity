@@ -425,36 +425,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 692318723162455459, guid: ec4394703322a9d4da95e4816a7fe828, type: 3}
---- !u!1 &936042867
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 936042868}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &936042868
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 936042867}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 496.1604, y: 0, z: 484.8185}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &979900749
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -820,7 +790,7 @@ RectTransform:
   m_GameObject: {fileID: 1645700632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4763001, y: 1.4763001, z: 1.4763001}
   m_Children: []
   m_Father: {fileID: 120986087}
   m_RootOrder: 1
@@ -843,7 +813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1185,7 +1155,7 @@ Transform:
   m_LocalScale: {x: 6.43, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &2062503787
 MeshCollider:
@@ -7112,7 +7082,7 @@ GameObject:
   - component: {fileID: 1357007670239904373}
   - component: {fileID: 1357007670239904363}
   m_Layer: 0
-  m_Name: NEW_FPS
+  m_Name: FPS_First_Level
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7288,7 +7258,7 @@ GameObject:
   - component: {fileID: 7938056146432931621}
   - component: {fileID: 1512179193553924818}
   m_Layer: 0
-  m_Name: german_soldier #3
+  m_Name: enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7767,7 +7737,7 @@ MonoBehaviour:
   sound: {fileID: 8300000, guid: 4e6ad2f800f9cf44fa700763f6d14fd1, type: 3}
   sound2: {fileID: 8300000, guid: 65f3af8ed97941842b8805a6e4bcdf2e, type: 3}
   walking_sound: {fileID: 1357007670122922816}
-  message1: {fileID: 936042867}
+  message1: {fileID: 1627434186}
   current_ammo: 0
   max_ammo: 5
   damage: 10
