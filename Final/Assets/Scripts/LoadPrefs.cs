@@ -24,9 +24,9 @@ public class LoadPrefs : MonoBehaviour
     [Header("Fullscreen Setting")]
     [SerializeField] private Toggle fullscreenToggle;
 
-    [Header("Sensitivity Setting")]
-    [SerializeField] private TMP_Text controllerSenTextValue = null;
-    [SerializeField] private Slider controllerSenSlider = null;
+    //[Header("Sensitivity Setting")]
+    //[SerializeField] private TMP_Text controllerSenTextValue = null;
+    //[SerializeField] private Slider controllerSenSlider = null;
 
 
     [Header("Invert Y Setting")]

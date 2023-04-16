@@ -29,6 +29,8 @@ public class New_Fps : MonoBehaviour
     {
         currentHealth = Maxhealth;
         hb.SetMaxHealth(Maxhealth);
+
+       
         animator = Enemy_soldier.GetComponent<Animator>();
     }
 
@@ -86,7 +88,8 @@ public class New_Fps : MonoBehaviour
                 animator.SetBool("shoot_enemy", true);
                 TakeDamage(5);
                 gm.PlaySound(clip);
-            }else 
+            }
+            else 
             animator.SetBool("shoot_enemy", false);
         }
 
