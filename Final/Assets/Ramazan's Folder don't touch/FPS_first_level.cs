@@ -16,14 +16,19 @@ public class FPS_first_level : MonoBehaviour
     private Vector3 velocity;
     public Transform CheckGround;
     public Camera camera;
+    //Health script
+    public float maxHealth = 100f;
+    public float currentHealth = 0f;
+    public float damage = 1f;
+    public HealthBar hb;
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float horizontal  = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
@@ -50,11 +55,23 @@ public class FPS_first_level : MonoBehaviour
         if(Input.GetKey(KeyCode.C))
         {
             controller.height = 1f;
-            cam.transform.localPosition = new Vector3(0, -0.36f, 0);
+            camera.transform.localPosition = new Vector3(0, -0.36f, 0);
         }else {
             controller.height = 2f;
-             cam.transform.localPosition = new Vector3(0, 0.2367195f, 0);
+             camera.transform.localPosition = new Vector3(0, 0.2367195f, 0);
         }
     }
-
+    public void TakeDamage()
+    {
+        currentHealth -= damage;
+        hb.SetHealth(currentHealth);
+        if(currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+    void Die()
+    {
+        print("Player is dead");
+    }
 }
