@@ -11,7 +11,8 @@ public class Enemy : MonoBehaviour
     public Animator anim;
     private float nextFireTime = 0f;
     public AudioSource source;
-    public AudioClip sound;
+    public AudioClip fire_sound;
+    public AudioClip hurt_sound;
     void Start() 
     {
         anim = GetComponent<Animator>();
@@ -35,10 +36,15 @@ public class Enemy : MonoBehaviour
                 PlaySound();
             }else
             anim.SetBool("shoot_enemy", false);
+            FPS_first_level fps = hit.transform.GetComponent<FPS_first_level>();
+            if(fps != null)
+            {
+                source.PlayOneShot(hurt_sound);
+            }
         }
     }
     void PlaySound()
     {
-        source.PlayOneShot(sound);
+        source.PlayOneShot(fire_sound);
     }
 }
