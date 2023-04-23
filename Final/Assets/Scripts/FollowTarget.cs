@@ -5,9 +5,8 @@ using UnityEngine;
 public class FollowTarget : MonoBehaviour
 {
     public GameObject target;
-
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         transform.LookAt(target.transform.position);
     }
