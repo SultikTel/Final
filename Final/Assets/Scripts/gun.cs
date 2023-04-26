@@ -97,11 +97,12 @@ public class gun : MonoBehaviour
             {
                 target.TakeDamage(damage);
             }
-            GermanSoldier germansoldier = hit.transform.GetComponent<GermanSoldier>();
-            if(germansoldier != null)
+            enemy_death enemy = hit.transform.GetComponent<enemy_death>();
+            if(enemy != null)
             {
-                germansoldier.TakeDamage(damage);
+                enemy.TakeDamage(damage);
             }
+            
             
             if(hit.rigidbody != null)
             {

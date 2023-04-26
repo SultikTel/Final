@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FPS_first_level : MonoBehaviour
 {
@@ -21,10 +22,13 @@ public class FPS_first_level : MonoBehaviour
     public float currentHealth = 0f;
     public float damage = 1f;
     public HealthBar hb;
+    public Image blood;
+    Color alphaColor;
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+        alphaColor = blood.color;
     }
 
     // Update is called once per frame
@@ -65,6 +69,7 @@ public class FPS_first_level : MonoBehaviour
     {
         currentHealth -= damage;
         hb.SetHealth(currentHealth);
+        StartCoroutine(BloodEffect());
         if(currentHealth <= 0)
         {
             Die();
@@ -73,5 +78,13 @@ public class FPS_first_level : MonoBehaviour
     void Die()
     {
         print("Player is dead");
+    }
+    IEnumerator BloodEffect()
+    {
+        alphaColor.a += .1f;
+        blood.color = alphaColor;
+        yield return new WaitForSeconds(5f);
+        alphaColor.a -= .1f;
+        blood.color = alphaColor;
     }
 }

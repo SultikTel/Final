@@ -6796,7 +6796,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4747997767828048241}
   - component: {fileID: 4747997767828048254}
-  - component: {fileID: 4747997767828048240}
   - component: {fileID: 4747997767828048236}
   - component: {fileID: 4747997767828048242}
   m_Layer: 0
@@ -6840,36 +6839,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4747997767828048240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4747997767828048243}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28e3d7d671293d34ab79ecb4e59e8851, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  jumpHeight: 5
-  jumpTime: 0.5
-  groundDistance: 0.2
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 256
-  isJumping: 1
-  controller: {fileID: 4747997767828048254}
-  G_O: {fileID: 6197694264702980742}
-  cam: {fileID: 2858727078886750479}
-  clip: {fileID: 0}
-  gm: {fileID: 0}
-  animator: {fileID: 4747997767828048236}
-  Enemy_soldier: {fileID: 0}
-  Maxhealth: 100
-  currentHealth: 0
-  hb: {fileID: 0}
 --- !u!95 &4747997767828048236
 Animator:
   serializedVersion: 3

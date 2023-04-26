@@ -5,6 +5,7 @@ using UnityEngine;
 public class New_Fps : MonoBehaviour
 {
     public float speed;
+    public float damage = 1f;
     public float jumpHeight = 1.0f;
     public float jumpTime = 0.5f;
     public float groundDistance = 0.2f;
@@ -20,18 +21,14 @@ public class New_Fps : MonoBehaviour
     public AudioClip clip;
     public GameManager gm;
     public Animator animator;
-    public GameObject Enemy_soldier;
-    public int Maxhealth = 100;
-    public int currentHealth;
+    public float Maxhealth = 100;
+    public float currentHealth;
     public HealthBar hb;
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = Maxhealth;
         hb.SetMaxHealth(Maxhealth);
-
-       
-        animator = Enemy_soldier.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -79,24 +76,10 @@ public class New_Fps : MonoBehaviour
             controller.height = 2f;
              cam.transform.localPosition = new Vector3(0, 0.2367195f, 0);
         }
-
-        Ray ray = new Ray(transform.position, transform.forward);
-
-        if(Physics.Raycast(ray, out RaycastHit hit, 50f)){
-            if(hit.collider.CompareTag("Enemy"))
-            {
-                animator.SetBool("shoot_enemy", true);
-                TakeDamage(5);
-                gm.PlaySound(clip);
-            }
-            else 
-            animator.SetBool("shoot_enemy", false);
-        }
-
     }
-    public void TakeDamage(int damageAmount)
+    public void TakeDamage()
     {
-        currentHealth -= damageAmount;
+        currentHealth -= damage;
         hb.SetHealth(currentHealth);
         if(currentHealth <= 0){
             print("Игрок умер");
