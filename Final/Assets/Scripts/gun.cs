@@ -82,15 +82,14 @@ public class gun : MonoBehaviour
         {
             Debug.Log(hit.transform.name);
 
-            //отсюда изменения делал султан
+            //Edited by Sultan
 
             EnemyBySultan enemyBySultan = hit.collider.GetComponent<EnemyBySultan>();
             if (enemyBySultan != null)
             {
                 enemyBySultan.die();
             }
-
-            //тут закончил 
+            //the ended by sultan
 
             Target target = hit.transform.GetComponent<Target>();
             if(target != null)
