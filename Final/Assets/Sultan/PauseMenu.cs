@@ -54,6 +54,6 @@ public class PauseMenu : MonoBehaviour
     public void MoveCam()
     {
 
-        minimap.orthographicSize = mainSlider.value*100;
+        minimap.orthographicSize = mainSlider.value;
     }
 }
