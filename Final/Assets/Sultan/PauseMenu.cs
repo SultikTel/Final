@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -54,6 +55,18 @@ public class PauseMenu : MonoBehaviour
     public void MoveCam()
     {
 
-        minimap.orthographicSize = mainSlider.value;
+        minimap.orthographicSize = (mainSlider.value*100+20f);
+    }
+
+    public void LoadMainMenu()
+    {
+        Resume();
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void Restart()
+    {
+        Resume();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
