@@ -18,45 +18,10 @@ public class WaveController : MonoBehaviour
     
     public void EnemyDead()
     {
-<<<<<<< Updated upstream
-        CheckWaveStatus();
-    }
-
-    void CheckWaveStatus()
-    {
-        bool waveComplete = true;
-        foreach (GameObject unit in waveUnits[currentWave - 1])
-        {
-            if (unit.activeSelf)
-            {
-                waveComplete= false;
-                break;
-            }
-        }
-
-        if(waveComplete)
-        {
-            currentWave++;
-            if(currentWave > 2)
-            {
-                victoryText.text = "Победа!";
-            }
-        
-        else
-        {
-                foreach (GameObject unit in waveUnits[currentWave - 1])
-                {
-                    Debug.Log("Streak");
-                    unit.SetActive(true);
-                }
-            }
-        }
-=======
         numEnemiesRightNow--;
          if(numEnemiesRightNow == 0)
        {
         second_team.SetActive(true);
        }
->>>>>>> Stashed changes
     }
 }
