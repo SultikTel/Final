@@ -53,6 +53,7 @@ public class WaveController : MonoBehaviour
         {
                 foreach (GameObject unit in waveUnits[currentWave - 1])
                 {
+                    Debug.Log("Streak");
                     unit.SetActive(true);
                 }
             }
