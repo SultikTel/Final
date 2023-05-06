@@ -29,6 +29,7 @@ public class FPS_first_level : MonoBehaviour
     {
         currentHealth = maxHealth;
         alphaColor = blood.color;
+        hb.SetHealth(currentHealth);
     }
 
     // Update is called once per frame

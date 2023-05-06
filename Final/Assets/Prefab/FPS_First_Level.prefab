@@ -6127,7 +6127,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2726680085170339720}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 496.1604, y: 0.96, z: 484.8185}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -11884,10 +11884,10 @@ MonoBehaviour:
   gamemanager: {fileID: 0}
   shoot: {fileID: 8300000, guid: 78e4e15d7b1483e4eac6a81ce2b98d5d, type: 3}
   fire: {fileID: 3963750819114311566}
-  Vzriv: {fileID: 0}
+  Vzriv: {fileID: 1449268238534436890, guid: ee9e9e83261bc414fae99f20745d08ec, type: 3}
   bullet_impact: {fileID: 100002, guid: bc8d2212c2ce5ef459edd17d2d63da64, type: 3}
   exploded: 0
-  panzer: {fileID: 0}
+  panzer: {fileID: 2464235786309412926, guid: f85fad9f0db9d764cb7ad045c118a7b7, type: 3}
   panzer_destroyed: {fileID: 2419308861321221901, guid: 2053d706094e0eb4d92fb0cb53e2ed65,
     type: 3}
 --- !u!1 &4437498823890822883
