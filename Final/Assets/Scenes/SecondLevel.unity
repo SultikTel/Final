@@ -3888,10 +3888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 3002073461355351556}
-  target2: {fileID: 0}
   navmesh: {fileID: 447518296}
-  stop: 0
-  goToObjectOne: 0
 --- !u!195 &447518296
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -12120,6 +12117,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 1311205889}
+  first_weapon: {fileID: 0}
+  second_weapon: {fileID: 0}
 --- !u!82 &1311205889
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19394,10 +19393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 846813118}
-  target2: {fileID: 1288767575}
   navmesh: {fileID: 2079261030}
-  stop: 0
-  goToObjectOne: 0
 --- !u!195 &2079261030
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -27717,10 +27713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 3002073461355351556}
-  target2: {fileID: 0}
   navmesh: {fileID: 4302389286631567988}
-  stop: 0
-  goToObjectOne: 0
 --- !u!195 &4302389286631567988
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -27758,6 +27751,7 @@ MonoBehaviour:
   health: 50
   NPC_Ragdoll: {fileID: 885332317472108417, guid: 0834ae6af6e1e4b40958cb09a835432e,
     type: 3}
+  wavecontroller: {fileID: 0}
 --- !u!4 &4358092969480010404
 Transform:
   m_ObjectHideFlags: 0
