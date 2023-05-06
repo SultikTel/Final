@@ -4905,6 +4905,7 @@ MonoBehaviour:
   health: 50
   NPC_Ragdoll: {fileID: 885332317472108417, guid: 0834ae6af6e1e4b40958cb09a835432e,
     type: 3}
+  wavecontroller: {fileID: 1838680600}
 --- !u!135 &429283630
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6329,7 +6330,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 537774749}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.8160248, y: -1.7170992, z: -2.2223282}
+  m_LocalPosition: {x: -1.89, y: -1.7170992, z: -2.2223282}
   m_LocalScale: {x: 87.65771, y: 87.65771, z: 87.65771}
   m_Children:
   - {fileID: 1260769220}
@@ -6411,6 +6412,7 @@ MonoBehaviour:
   health: 50
   NPC_Ragdoll: {fileID: 885332317472108417, guid: 0834ae6af6e1e4b40958cb09a835432e,
     type: 3}
+  wavecontroller: {fileID: 1838680600}
 --- !u!135 &537774755
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6879,6 +6881,7 @@ MonoBehaviour:
   health: 50
   NPC_Ragdoll: {fileID: 885332317472108417, guid: 0834ae6af6e1e4b40958cb09a835432e,
     type: 3}
+  wavecontroller: {fileID: 1838680600}
 --- !u!135 &566564710
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9667,6 +9670,7 @@ MonoBehaviour:
   health: 50
   NPC_Ragdoll: {fileID: 885332317472108417, guid: 0834ae6af6e1e4b40958cb09a835432e,
     type: 3}
+  wavecontroller: {fileID: 1838680600}
 --- !u!135 &868757617
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14457,7 +14461,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1303457184}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.8160248, y: -1.7170992, z: -2.2223282}
+  m_LocalPosition: {x: -3.8160248, y: -1.7170992, z: -0.4}
   m_LocalScale: {x: 87.65771, y: 87.65771, z: 87.65771}
   m_Children:
   - {fileID: 925661025}
@@ -14539,6 +14543,7 @@ MonoBehaviour:
   health: 50
   NPC_Ragdoll: {fileID: 885332317472108417, guid: 0834ae6af6e1e4b40958cb09a835432e,
     type: 3}
+  wavecontroller: {fileID: 1838680600}
 --- !u!135 &1303457190
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -17167,7 +17172,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1586103928
 Transform:
   m_ObjectHideFlags: 0
@@ -17176,7 +17181,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1586103927}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.7599945, y: 0, z: 0}
+  m_LocalPosition: {x: 83.9, y: -0.4, z: 204}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 868757612}
@@ -19607,7 +19612,7 @@ GameObject:
   - component: {fileID: 1838680602}
   - component: {fileID: 1838680601}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: WaveController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19625,8 +19630,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d077a2414da24ad48819ec2b2cebe69b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWave: 1
-  victoryText: {fileID: 0}
+  first_team: {fileID: 65891290}
+  second_team: {fileID: 1586103927}
+  numEnemiesRightNow: 0
 --- !u!4 &1838680602
 Transform:
   m_ObjectHideFlags: 0
@@ -21962,6 +21968,7 @@ MonoBehaviour:
   health: 50
   NPC_Ragdoll: {fileID: 885332317472108417, guid: 0834ae6af6e1e4b40958cb09a835432e,
     type: 3}
+  wavecontroller: {fileID: 1838680600}
 --- !u!135 &1980855563
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -23041,7 +23048,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2076867370}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.8160248, y: -1.7170992, z: -2.2223282}
+  m_LocalPosition: {x: -5.98, y: -1.7170992, z: -2.2223282}
   m_LocalScale: {x: 87.65771, y: 87.65771, z: 87.65771}
   m_Children:
   - {fileID: 321609875}
@@ -23123,6 +23130,7 @@ MonoBehaviour:
   health: 50
   NPC_Ragdoll: {fileID: 885332317472108417, guid: 0834ae6af6e1e4b40958cb09a835432e,
     type: 3}
+  wavecontroller: {fileID: 1838680600}
 --- !u!135 &2076867376
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -24509,6 +24517,7 @@ MonoBehaviour:
   health: 50
   NPC_Ragdoll: {fileID: 885332317472108417, guid: 0834ae6af6e1e4b40958cb09a835432e,
     type: 3}
+  wavecontroller: {fileID: 1838680600}
 --- !u!195 &1080721069539223335
 NavMeshAgent:
   m_ObjectHideFlags: 0

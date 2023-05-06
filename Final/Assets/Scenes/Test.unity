@@ -706,7 +706,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -5547,6 +5547,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 1440749855}
+  first_weapon: {fileID: 2167470126331702253}
+  second_weapon: {fileID: 919132149540578348}
 --- !u!4 &1440749857
 Transform:
   m_ObjectHideFlags: 0
@@ -11437,6 +11439,7 @@ MonoBehaviour:
   fire: {fileID: 1978409580}
   Vzriv: {fileID: 1310350665}
   bullet_impact: {fileID: 100002, guid: bc8d2212c2ce5ef459edd17d2d63da64, type: 3}
+  exploded: 0
 --- !u!1 &973992247707656996
 GameObject:
   m_ObjectHideFlags: 0
@@ -17626,7 +17629,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2221851147462432213
 Transform:
   m_ObjectHideFlags: 0
@@ -21779,6 +21782,7 @@ MonoBehaviour:
   health: 50
   NPC_Ragdoll: {fileID: 885332317472108417, guid: 0834ae6af6e1e4b40958cb09a835432e,
     type: 3}
+  wavecontroller: {fileID: 0}
 --- !u!114 &7938056146432931621
 MonoBehaviour:
   m_ObjectHideFlags: 0

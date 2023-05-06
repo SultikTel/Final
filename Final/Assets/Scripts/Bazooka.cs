@@ -13,12 +13,14 @@ public class Bazooka : MonoBehaviour
     public ParticleSystem fire;
     public ParticleSystem Vzriv;
     public GameObject bullet_impact;
+    public bool exploded;
     // Start is called before the first frame update
     void Start()
     {
         fire.Stop();
         Vzriv.Stop();
         current_ammo = magazine;
+        exploded = false;
     }
 
     // Update is called once per frame
@@ -31,9 +33,10 @@ public class Bazooka : MonoBehaviour
             gamemanager.PlaySound(shoot);
             current_ammo -= 1;
         }
-        if(count == 3)
+        if(count == 3 && exploded == false)
         {
             Vzriv.Play();
+            exploded = true;
         }
     }
     void Shoot()

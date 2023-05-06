@@ -6,14 +6,18 @@ public class Target : MonoBehaviour
 {
     public int health = 50;
     public GameObject NPC_Ragdoll;
-
+    public GameObject wavecontroller;
     public void TakeDamage(int damage)
     {
         health -= damage;
         if(health == 0)
         {
-            health = 50;
+            //health = 50;
             Die();
+            if(wavecontroller.GetComponent<WaveController>()!= false)
+            {
+                wavecontroller.GetComponent<WaveController>().EnemyDead();
+            }
         }
     }
     void Die()
