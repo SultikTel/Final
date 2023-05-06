@@ -115,7 +115,7 @@ public class gun : MonoBehaviour
     {
         gm.PlaySound(sound2);
     }
-    IEnumerator Reloading()
+    public IEnumerator Reloading()
     {
         isReloading = true;
         message1.SetActive(true);

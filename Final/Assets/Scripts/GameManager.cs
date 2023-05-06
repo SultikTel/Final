@@ -22,10 +22,15 @@ public class GameManager : MonoBehaviour
         {
             second_weapon.SetActive(true);
             first_weapon.SetActive(false);
+            first_weapon.GetComponent<gun>().message1.SetActive(false);
         }else if(Input.GetKeyDown(KeyCode.Keypad1))
         {
             second_weapon.SetActive(false);
             first_weapon.SetActive(true);
+            if(first_weapon.GetComponent<gun>().current_ammo == 0){
+                first_weapon.GetComponent<gun>().StartCoroutine(first_weapon.GetComponent<gun>().Reloading());
+            }
+            //first_weapon.GetComponent<gun>().current_ammo = first_weapon.GetComponent<gun>().max_ammo;
         }
     }
 

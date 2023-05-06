@@ -14,6 +14,8 @@ public class Bazooka : MonoBehaviour
     public ParticleSystem Vzriv;
     public GameObject bullet_impact;
     public bool exploded;
+    public GameObject panzer;
+    public GameObject panzer_destroyed;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +39,16 @@ public class Bazooka : MonoBehaviour
         {
             Vzriv.Play();
             exploded = true;
+            StartCoroutine(Panzer_death());
         }
+    }
+    IEnumerator Panzer_death()
+    {
+        yield return new WaitForSeconds(.7f);
+        panzer.SetActive(false);
+        panzer_destroyed.SetActive(true);
+        Instantiate(panzer_destroyed, panzer.transform.position, panzer.transform.rotation);
+
     }
     void Shoot()
     {
