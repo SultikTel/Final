@@ -7,6 +7,8 @@ public class WaveController : MonoBehaviour
 {
     public GameObject first_team;
     public GameObject second_team;
+    public GameObject third_team;
+
     public int numEnemiesRightNow;
 
     void Start()
@@ -22,6 +24,9 @@ public class WaveController : MonoBehaviour
          if(numEnemiesRightNow == 0)
        {
         second_team.SetActive(true);
-       }
+               
+        }
+        
+        
     }
 }
