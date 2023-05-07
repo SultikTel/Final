@@ -7,6 +7,7 @@ TagManager:
   - soldier
   - Enemy
   - Panzer
+  - Panzer2
   layers:
   - Default
   - TransparentFX
