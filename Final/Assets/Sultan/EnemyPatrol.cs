@@ -21,6 +21,7 @@ public class EnemyPatrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (stay == false)
         {
             if (goTo1 == true)
@@ -33,13 +34,14 @@ public class EnemyPatrol : MonoBehaviour
             }
         }
 
+        if (navmesh.remainingDistance < 1 && stay == false)
+        {
+            ReachedTarget();
+        }
+
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        ReachedTarget();
 
-    }
 
     public void ReachedTarget()
     {
