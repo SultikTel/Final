@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Panzer
   - Panzer2
+  - Bullets
   layers:
   - Default
   - TransparentFX

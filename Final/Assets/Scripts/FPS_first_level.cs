@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class FPS_first_level : MonoBehaviour
 {
     public float speed;
-    public float jumpHeight = 1.0f;
-    public float jumpTime = 0.5f;
-    public float groundDistance = 0.2f;
+    private float jumpHeight = 1.0f;
+    private float jumpTime = 0.5f;
+    private float groundDistance = 0.2f;
     public LayerMask groundMask;
     public bool isJumping = false;
     private float jumpVelocity = 0.0f;
@@ -17,6 +17,7 @@ public class FPS_first_level : MonoBehaviour
     private Vector3 velocity;
     public Transform CheckGround;
     public Camera camera;
+    public GameObject bazooka;
     //Health script
     public float maxHealth = 100f;
     public float currentHealth = 0f;
@@ -87,5 +88,18 @@ public class FPS_first_level : MonoBehaviour
         yield return new WaitForSeconds(5f);
         alphaColor.a -= .1f;
         blood.color = alphaColor;
+    }
+
+    public void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if(hit.collider.CompareTag("Bullets"))
+        {
+            if(bazooka.GetComponent<Bazooka2>().current_ammo == 0)
+            {
+                print("work");
+                bazooka.GetComponent<Bazooka2>().current_ammo = 3;
+                bazooka.GetComponent<Bazooka2>().reload_text.GetComponent<Text>().text = "Bazooka Ammo: " + bazooka.GetComponent<Bazooka2>().current_ammo.ToString();
+            }
+        }
     }
 }

@@ -8,12 +8,11 @@ public class GameManager : MonoBehaviour
     public AudioSource source;
     public GameObject first_weapon; //don't touch
     public GameObject second_weapon; //don't touch
-    
-
 
     void Start() 
     {
         second_weapon.SetActive(false); //code by ramazan
+        second_weapon.GetComponent<Bazooka2>().Deactivation();
     }
     
     public void PlaySound(AudioClip sound)
@@ -38,11 +37,13 @@ public class GameManager : MonoBehaviour
         {
             second_weapon.SetActive(true);
             first_weapon.SetActive(false);
+            second_weapon.GetComponent<Bazooka2>().ActiveReloadText();
             first_weapon.GetComponent<gun>().message1.SetActive(false);
         }else if(Input.GetKeyDown(KeyCode.Keypad1))
         {
             second_weapon.SetActive(false);
             first_weapon.SetActive(true);
+             second_weapon.GetComponent<Bazooka2>().Deactivation();
             if(first_weapon.GetComponent<gun>().current_ammo == 0){
                 first_weapon.GetComponent<gun>().StartCoroutine(first_weapon.GetComponent<gun>().Reloading());
             }
