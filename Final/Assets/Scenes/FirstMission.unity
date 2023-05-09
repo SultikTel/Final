@@ -16669,6 +16669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 1476449483}
+  weapon_switch: {fileID: 8300000, guid: 8f0797aa374314645af68e78e88fac44, type: 3}
   first_weapon: {fileID: 424593667750212095}
   second_weapon: {fileID: 1671252149052767806}
 --- !u!82 &1476449483

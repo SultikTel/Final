@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public AudioSource source;
+    public AudioClip weapon_switch;
     public GameObject first_weapon; //don't touch
     public GameObject second_weapon; //don't touch
 
@@ -39,11 +40,13 @@ public class GameManager : MonoBehaviour
             first_weapon.SetActive(false);
             second_weapon.GetComponent<Bazooka2>().ActiveReloadText();
             first_weapon.GetComponent<gun>().message1.SetActive(false);
+            source.PlayOneShot(weapon_switch);
         }else if(Input.GetKeyDown(KeyCode.Keypad1))
         {
             second_weapon.SetActive(false);
             first_weapon.SetActive(true);
-             second_weapon.GetComponent<Bazooka2>().Deactivation();
+            source.PlayOneShot(weapon_switch);
+            second_weapon.GetComponent<Bazooka2>().Deactivation();
             if(first_weapon.GetComponent<gun>().current_ammo == 0){
                 first_weapon.GetComponent<gun>().StartCoroutine(first_weapon.GetComponent<gun>().Reloading());
             }
