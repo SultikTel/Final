@@ -9,7 +9,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject PausePanel;
     public bool onPause;
     public Camera minimap;
-    public Slider mainSlider;
+    
+    public AudioSource backGroundMusic;
 
     // Update is called once per frame
 
@@ -52,10 +53,10 @@ public class PauseMenu : MonoBehaviour
 
     }
 
-    public void MoveCam()
+    public void MoveCam(float value)
     {
 
-        minimap.orthographicSize = (mainSlider.value*100+20f);
+        minimap.orthographicSize = (value * 100+20f);
     }
 
     public void LoadMainMenu()
@@ -68,5 +69,10 @@ public class PauseMenu : MonoBehaviour
     {
         Resume();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void SetVolume(float value)
+    {
+        backGroundMusic.volume = value;
     }
 }
