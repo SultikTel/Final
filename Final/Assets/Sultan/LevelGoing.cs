@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class LevelGoing : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class LevelGoing : MonoBehaviour
     public ArrayList enemiesRightNow;
     public int numEnemiesRightNow;
     public int waveRightNow;
-    public Text text;
+    public TextMeshPro text;
     public Text tasks;
     public Text enemiesLeft;
 
