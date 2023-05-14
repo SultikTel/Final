@@ -24913,6 +24913,8 @@ MonoBehaviour:
   CheckGround: {fileID: 2216888849229972365}
   camera: {fileID: 8029187581800212484}
   bazooka: {fileID: 1671252149052767806}
+  source: {fileID: 1476449483}
+  sound_reload: {fileID: 8300000, guid: 65f3af8ed97941842b8805a6e4bcdf2e, type: 3}
   maxHealth: 100
   currentHealth: 0
   damage: 1
@@ -30805,7 +30807,7 @@ MonoBehaviour:
   shoot: {fileID: 8300000, guid: 78e4e15d7b1483e4eac6a81ce2b98d5d, type: 3}
   reload_text: {fileID: 1423638473}
   fire: {fileID: 658964125041091216}
-  Vzriv: {fileID: 6291186537593666735, guid: ee9e9e83261bc414fae99f20745d08ec, type: 3}
+  Vzriv: {fileID: 19800000, guid: 4ed7dfdec18214346934b25e8090ed6f, type: 3}
   bullet_impact: {fileID: 100002, guid: bc8d2212c2ce5ef459edd17d2d63da64, type: 3}
   panzer_destroyed: {fileID: 2419308861321221901, guid: 2053d706094e0eb4d92fb0cb53e2ed65,
     type: 3}

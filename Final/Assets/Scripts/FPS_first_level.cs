@@ -18,6 +18,8 @@ public class FPS_first_level : MonoBehaviour
     public Transform CheckGround;
     public Camera camera;
     public GameObject bazooka;
+    public AudioSource source;
+    public AudioClip sound_reload;
     //Health script
     public float maxHealth = 100f;
     public float currentHealth = 0f;
@@ -97,6 +99,7 @@ public class FPS_first_level : MonoBehaviour
             if(bazooka.GetComponent<Bazooka2>().current_ammo == 0)
             {
                 print("work");
+                source.PlayOneShot(sound_reload);
                 bazooka.GetComponent<Bazooka2>().current_ammo = 3;
                 bazooka.GetComponent<Bazooka2>().reload_text.GetComponent<Text>().text = "Bazooka Ammo: " + bazooka.GetComponent<Bazooka2>().current_ammo.ToString();
             }
