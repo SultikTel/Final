@@ -13,6 +13,7 @@ public class WaveController : MonoBehaviour
 
     void Start()
     {
+        third_team.SetActive(false);
         second_team.SetActive(false);
         numEnemiesRightNow = first_team.transform.childCount;
     }
@@ -22,11 +23,16 @@ public class WaveController : MonoBehaviour
     {
         numEnemiesRightNow--;
          if(numEnemiesRightNow == 0)
-       {
-        second_team.SetActive(true);
-               
+        {
+            second_team.SetActive(true);   
+            if(second_team.transform.childCount > 0)
+            {
+               third_team.SetActive(true);
+            }
         }
         
         
+
+
     }
 }
