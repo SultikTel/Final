@@ -18,7 +18,7 @@ public class Bazooka2 : MonoBehaviour
     private GameObject panzer;
     public GameObject panzer_destroyed;
     public bool exploded;
-
+    public GameObject bullet_prefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -69,8 +69,7 @@ public class Bazooka2 : MonoBehaviour
                 count += 1;
                 panzer = Hitinfo.transform.gameObject;
             }
-            
-
+        
             if (Hitinfo.rigidbody != null)
             {
                 Hitinfo.rigidbody.AddForce(-Hitinfo.normal * 80);
