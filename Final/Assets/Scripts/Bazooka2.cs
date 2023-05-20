@@ -14,6 +14,7 @@ public class Bazooka2 : MonoBehaviour
     public GameObject reload_text;
     public ParticleSystem fire;
     public ParticleSystem Vzriv;
+    public GameObject vzriv_gameobject;
     public GameObject bullet_impact;
     private GameObject panzer;
     public GameObject panzer_destroyed;
@@ -56,7 +57,7 @@ public class Bazooka2 : MonoBehaviour
         yield return new WaitForSeconds(.7f);
         panzer.SetActive(false);
         panzer_destroyed.SetActive(true);
-        Instantiate(panzer_destroyed, panzer.transform.position, panzer_destroyed.transform.rotation);
+        Instantiate(panzer_destroyed, panzer.transform.position, panzer.transform.rotation);
     }
 
     void Shoot()
@@ -78,7 +79,7 @@ public class Bazooka2 : MonoBehaviour
             GameObject impact_clone = Instantiate(bullet_impact, Hitinfo.point, Quaternion.LookRotation(Hitinfo.normal));
             Destroy(impact_clone, 1.5f);
 
-            ParticleSystem boom = Instantiate(Vzriv, Hitinfo.point, Quaternion.LookRotation(Hitinfo.normal));
+            GameObject boom = Instantiate(vzriv_gameobject, Hitinfo.point, Quaternion.LookRotation(Hitinfo.normal));
             Destroy(boom, 2f);
         }
     }

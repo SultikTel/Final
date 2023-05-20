@@ -41729,6 +41729,7 @@ MonoBehaviour:
   reload_text: {fileID: 1423638473}
   fire: {fileID: 658964125041091216}
   Vzriv: {fileID: 19800000, guid: 4ed7dfdec18214346934b25e8090ed6f, type: 3}
+  vzriv_gameobject: {fileID: 100000, guid: 4ed7dfdec18214346934b25e8090ed6f, type: 3}
   bullet_impact: {fileID: 100002, guid: bc8d2212c2ce5ef459edd17d2d63da64, type: 3}
   panzer_destroyed: {fileID: 2419308861321221901, guid: 2053d706094e0eb4d92fb0cb53e2ed65,
     type: 3}
