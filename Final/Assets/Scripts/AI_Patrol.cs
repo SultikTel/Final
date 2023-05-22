@@ -7,33 +7,43 @@ public class AI_Patrol : MonoBehaviour
     public float speed;
     public Transform[] points;
     int random_point;
-    bool moving;
+    int new_point;
+    bool stay = true;
+    Animator anim;
     // Start is called before the first frame update
     void Start()
     {
         random_point = Random.Range(0, points.Length); 
+        anim = GetComponent<Animator>();
+        stay = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(moving == false)
-        {
-            MovingToDestination();
-        }
+        MovingToDestination();
+
         if(transform.position == points[random_point].position)
         {
-            random_point = Random.Range(0, points.Length);
+            if(stay == true){
+            StartCoroutine(Stay());
+            } 
         }
     }
     void MovingToDestination()
     {
-        if(moving == false)
-        {
             transform.position = Vector3.MoveTowards(transform.position, points[random_point].position, speed * Time.deltaTime);
             transform.LookAt(points[random_point].position);
-            
-        }else moving = true;
     }
-
+    IEnumerator Stay()
+    {
+        stay = false;
+        yield return new WaitForSeconds(3f);
+        while(new_point == random_point)
+        {
+          new_point = Random.Range(0, points.Length);  
+        }
+        random_point = new_point;
+        stay = true;
+    }
 }
