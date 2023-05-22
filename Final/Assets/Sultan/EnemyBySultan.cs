@@ -34,7 +34,7 @@ public class EnemyBySultan : MonoBehaviour
         getFade();
         lvl.EnemyDown();
 
-        this.gameObject.SetActive(false);
+        gameObject.SetActive(false);
         German_Ragdoll.SetActive(true);
         Instantiate(German_Ragdoll, transform.position, transform.rotation);
 
