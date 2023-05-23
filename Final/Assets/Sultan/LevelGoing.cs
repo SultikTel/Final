@@ -1,8 +1,9 @@
-﻿    using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class LevelGoing : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class LevelGoing : MonoBehaviour
     public ArrayList enemiesRightNow;
     public int numEnemiesRightNow;
     public int waveRightNow;
-    public TextMeshPro text;
+    public TMP_Text text;
     public Text tasks;
     public Text enemiesLeft;
 
@@ -73,7 +74,7 @@ public class LevelGoing : MonoBehaviour
         enemiesRightNow = new ArrayList(FindObjectsOfType<EnemyBySultan>());
         numEnemiesRightNow = enemiesRightNow.Count;
 
-        ShowText("NeedToDef second wave");
+        ShowText("Need to clear the village");
         waveRightNow = 2;
 
         tasks.text = "Очистить деревню";
