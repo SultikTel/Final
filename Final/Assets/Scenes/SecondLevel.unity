@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4506581, g: 0.668982, b: 0.6559596, a: 1}
+  m_IndirectSpecularColor: {r: 0.44989812, g: 0.66960996, b: 0.65621203, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10707,7 +10707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 1311205889}
-  weapon_switch: {fileID: 0}
+  weapon_switch: {fileID: 8300000, guid: 8f0797aa374314645af68e78e88fac44, type: 3}
   first_weapon: {fileID: 743414035}
   second_weapon: {fileID: 1824038890}
 --- !u!82 &1311205889
@@ -23444,6 +23444,8 @@ MonoBehaviour:
   CheckGround: {fileID: 4489918544948188659}
   camera: {fileID: 5756156787709329018}
   bazooka: {fileID: 0}
+  source: {fileID: 0}
+  sound_reload: {fileID: 0}
   maxHealth: 100
   currentHealth: 0
   damage: 1

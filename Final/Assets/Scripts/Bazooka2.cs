@@ -20,6 +20,9 @@ public class Bazooka2 : MonoBehaviour
     public GameObject panzer_destroyed;
     public bool exploded;
     public GameObject bullet_prefab;
+
+    //WaveController to count enemy otryad
+    public GameObject wavecontroller;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +48,7 @@ public class Bazooka2 : MonoBehaviour
         }
         if (count == 3 && !exploded && panzer != null) //Check if our count bullets = 3 and he triggered by tank then play effects vzriv
         {
+            wavecontroller.GetComponent<WaveController>().EnemyDead();
             exploded = false;
             count = 0;
             StartCoroutine(Panzer_death());

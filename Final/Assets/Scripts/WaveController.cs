@@ -30,9 +30,5 @@ public class WaveController : MonoBehaviour
                third_team.SetActive(true);
             }
         }
-        
-        
-
-
     }
 }

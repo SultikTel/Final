@@ -132,7 +132,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7148909395246733250}
   - component: {fileID: 5596528078706505490}
-  - component: {fileID: 7602292910411360163}
   m_Layer: 0
   m_Name: lib_rus_soldier.003
   m_TagString: Untagged
@@ -210,20 +209,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.7898216, y: 28.105598, z: 7.170973}
     m_Extent: {x: 10.038174, y: 17.398247, z: 12.867798}
   m_DirtyAABB: 0
---- !u!136 &7602292910411360163
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288104026117899994}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.14897726
-  m_Height: 0.37039143
-  m_Direction: 1
-  m_Center: {x: 0.013836441, y: 1.6360316, z: 0.0744978}
 --- !u!1 &411612120537887955
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,7 +280,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7515966334485629948}
   - component: {fileID: 6896255800933413207}
-  - component: {fileID: 7602292911091607997}
   m_Layer: 0
   m_Name: lib_rus_soldier.010
   m_TagString: Untagged
@@ -372,20 +356,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -15.71726, y: 10.016422, z: 9.432791}
     m_Extent: {x: 1.2613945, y: 1.85461, z: 1.7558427}
   m_DirtyAABB: 0
---- !u!136 &7602292911091607997
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 508740695859547098}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.019748658
-  m_Height: 0.04035632
-  m_Direction: 1
-  m_Center: {x: -0.16706945, y: 1.0896242, z: 0.076113015}
 --- !u!1 &569242892701404840
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,7 +397,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2452851355392546826}
   - component: {fileID: 7764062695440016959}
-  - component: {fileID: 7602292911418664594}
   m_Layer: 0
   m_Name: lib_rus_soldier.012
   m_TagString: Untagged
@@ -504,20 +473,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -14.905103, y: 9.684591, z: 11.144458}
     m_Extent: {x: 1.6949072, y: 4.6827416, z: 3.762863}
   m_DirtyAABB: 0
---- !u!136 &7602292911418664594
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 727183444186635310}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.042269453
-  m_Height: 0.10019165
-  m_Direction: 1
-  m_Center: {x: -0.16007875, y: 1.0875611, z: 0.09391262}
 --- !u!1 &761539127327530989
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,7 +514,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1971796838138329796}
   - component: {fileID: 2717358667447723842}
-  - component: {fileID: 7602292912201002562}
   m_Layer: 0
   m_Name: lib_rus_soldier.004
   m_TagString: Untagged
@@ -668,20 +622,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 19.301706, y: 28.341408, z: 37.33313}
     m_Extent: {x: 21.866537, y: 24.599823, z: 42.37764}
   m_DirtyAABB: 0
---- !u!136 &7602292912201002562
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 837194784745402147}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5157298
-  m_Height: 0.78110594
-  m_Direction: 1
-  m_Center: {x: 0.09644741, y: 1.0418576, z: 0.0987214}
 --- !u!1 &1064991925917472829
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,7 +756,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1197279978707844856}
   - component: {fileID: 2802638868309323810}
-  - component: {fileID: 7602292910618649395}
   m_Layer: 0
   m_Name: lib_rus_soldier.027
   m_TagString: Untagged
@@ -893,20 +832,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -14.781057, y: 11.514195, z: 9.600924}
     m_Extent: {x: 1.4281669, y: 1.3028822, z: 1.315373}
   m_DirtyAABB: 0
---- !u!136 &7602292910618649395
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1374241019989421667}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.015371087
-  m_Height: 0.028704422
-  m_Direction: 1
-  m_Center: {x: -0.15745106, y: 1.1044972, z: 0.077155575}
 --- !u!1 &1432071351066160858
 GameObject:
   m_ObjectHideFlags: 0
@@ -1412,7 +1337,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8528061152462135071}
   - component: {fileID: 6787143664868253932}
-  - component: {fileID: 7602292910327904143}
   m_Layer: 0
   m_Name: lib_rus_soldier.005
   m_TagString: Untagged
@@ -1495,20 +1419,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -5.236801, y: 24.40646, z: -3.3084316}
     m_Extent: {x: 27.514843, y: 43.692738, z: 24.866114}
   m_DirtyAABB: 0
---- !u!136 &7602292910327904143
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4433328582996922288}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.30053622
-  m_Height: 0.92272943
-  m_Direction: 1
-  m_Center: {x: -0.05119487, y: 1.220413, z: -0.055767544}
 --- !u!1 &4547312646316194056
 GameObject:
   m_ObjectHideFlags: 0
@@ -1672,7 +1582,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2827922070862632631}
   - component: {fileID: 3459690819141200956}
-  - component: {fileID: 7602292910680732277}
   m_Layer: 0
   m_Name: lib_rus_soldier.008
   m_TagString: Untagged
@@ -1753,20 +1662,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -7.955309, y: -53.28199, z: 18.458506}
     m_Extent: {x: 12.500534, y: 81.932976, z: 8.46278}
   m_DirtyAABB: 0
---- !u!136 &7602292910680732277
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4813321020222750404}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.15882318
-  m_Height: 1.6505911
-  m_Direction: 1
-  m_Center: {x: -0.057422355, y: 0.81450385, z: 0.12738264}
 --- !u!1 &4884969629925158571
 GameObject:
   m_ObjectHideFlags: 0
@@ -1839,7 +1734,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9008274130168390852}
   - component: {fileID: 1816302350976270957}
-  - component: {fileID: 7602292910218186826}
   m_Layer: 0
   m_Name: lib_rus_soldier.001
   m_TagString: Untagged
@@ -1914,20 +1808,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -3.359447, y: 17.05072, z: 11.251763}
     m_Extent: {x: 1.5493398, y: 2.5234814, z: 2.4893322}
   m_DirtyAABB: 0
---- !u!136 &7602292910218186826
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4926217716304609002}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.03011629
-  m_Height: 0.05950124
-  m_Direction: 1
-  m_Center: {x: -0.013078199, y: 1.675321, z: 0.13678777}
 --- !u!1 &5131150977378713311
 GameObject:
   m_ObjectHideFlags: 0
@@ -1968,7 +1848,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7737744176042025430}
   - component: {fileID: 57922860156185490}
-  - component: {fileID: 7602292910991969125}
   m_Layer: 0
   m_Name: lib_rus_soldier.014
   m_TagString: Untagged
@@ -2066,20 +1945,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 4.36195, y: -20.734554, z: 4.750126}
     m_Extent: {x: 50.66969, y: 89.81438, z: 39.338745}
   m_DirtyAABB: 0
---- !u!136 &7602292910991969125
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5300195365515342988}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5519235
-  m_Height: 1.8750081
-  m_Direction: 1
-  m_Center: {x: 0.028362736, y: 0.77531064, z: 0.06684271}
 --- !u!1 &5360207478308278439
 GameObject:
   m_ObjectHideFlags: 0
@@ -2249,7 +2114,6 @@ GameObject:
   m_Component:
   - component: {fileID: 296457363543190177}
   - component: {fileID: 6000667201786957015}
-  - component: {fileID: 7602292911396019919}
   m_Layer: 0
   m_Name: lib_rus_soldier.011
   m_TagString: Untagged
@@ -2325,20 +2189,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -6.427618, y: 8.715549, z: 12.673458}
     m_Extent: {x: 1.5120399, y: 5.6162, z: 1.1261902}
   m_DirtyAABB: 0
---- !u!136 &7602292911396019919
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5855276089222582778}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.017181236
-  m_Height: 0.11438376
-  m_Direction: 1
-  m_Center: {x: -0.07664874, y: 1.0774497, z: 0.11516483}
 --- !u!1 &5989627920236704019
 GameObject:
   m_ObjectHideFlags: 0
@@ -2441,7 +2291,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6565268908165362633}
   - component: {fileID: 7369174982652608223}
-  - component: {fileID: 7602292911527586170}
   m_Layer: 0
   m_Name: lib_rus_soldier.007
   m_TagString: Untagged
@@ -2516,20 +2365,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 3.0756598, y: 17.096422, z: 11.326135}
     m_Extent: {x: 1.5505247, y: 2.5691833, z: 2.4149609}
   m_DirtyAABB: 0
---- !u!136 &7602292911527586170
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6151785138870885600}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.029465131
-  m_Height: 0.060143158
-  m_Direction: 1
-  m_Center: {x: 0.051046323, y: 1.673178, z: 0.13176027}
 --- !u!1 &6242398342765397124
 GameObject:
   m_ObjectHideFlags: 0
@@ -2571,7 +2406,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1899847410307515067}
   - component: {fileID: 1384307720381063895}
-  - component: {fileID: 7602292910905609263}
   m_Layer: 0
   m_Name: lib_rus_soldier.017
   m_TagString: Untagged
@@ -2646,20 +2480,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.11576462, y: 23.232407, z: 3.3438249}
     m_Extent: {x: 8.571075, y: 8.931053, z: 14.028027}
   m_DirtyAABB: 0
---- !u!136 &7602292910905609263
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6274716638063168630}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.16058967
-  m_Height: 0.23108202
-  m_Direction: 1
-  m_Center: {x: 0.017664216, y: 1.7486501, z: 0.0667384}
 --- !u!1 &6332487868674314901
 GameObject:
   m_ObjectHideFlags: 0
@@ -2736,7 +2556,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6030557249642171253}
   - component: {fileID: 5025823150858977248}
-  - component: {fileID: 7602292910636290187}
   m_Layer: 0
   m_Name: lib_rus_soldier.028
   m_TagString: Untagged
@@ -2812,20 +2631,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -7.0880036, y: 9.977921, z: 14.054003}
     m_Extent: {x: 1.8569503, y: 2.2544866, z: 0.97070646}
   m_DirtyAABB: 0
---- !u!136 &7602292910636290187
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6422696948145989622}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.019682217
-  m_Height: 0.047274627
-  m_Direction: 1
-  m_Center: {x: -0.0837511, y: 1.0912967, z: 0.12746835}
 --- !u!1 &6580218977264663502
 GameObject:
   m_ObjectHideFlags: 0
@@ -3021,6 +2826,7 @@ GameObject:
   - component: {fileID: 7929286857509731506}
   - component: {fileID: 7602292911297482998}
   - component: {fileID: 7602292911297482953}
+  - component: {fileID: 1493108837}
   m_Layer: 0
   m_Name: Bot Soviet_Soldier
   m_TagString: Untagged
@@ -3096,6 +2902,20 @@ MonoBehaviour:
   points:
   - {fileID: 0}
   - {fileID: 0}
+--- !u!136 &1493108837
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7296302873602303496}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 42.1
+  m_Height: 181.8
+  m_Direction: 1
+  m_Center: {x: 0, y: 87.4, z: 0}
 --- !u!1 &7385924543623960908
 GameObject:
   m_ObjectHideFlags: 0
@@ -3106,7 +2926,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4843018815532392075}
   - component: {fileID: 2734087401634959928}
-  - component: {fileID: 7602292911824869302}
   m_Layer: 0
   m_Name: lib_rus_soldier.013
   m_TagString: Untagged
@@ -3183,20 +3002,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -13.770202, y: 8.522887, z: 10.728187}
     m_Extent: {x: 3.0724669, y: 6.093644, z: 3.7153635}
   m_DirtyAABB: 0
---- !u!136 &7602292911824869302
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7385924543623960908}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.043791924
-  m_Height: 0.12878697
-  m_Direction: 1
-  m_Center: {x: -0.14879622, y: 1.0754142, z: 0.0914146}
 --- !u!1 &7387527930317620563
 GameObject:
   m_ObjectHideFlags: 0
@@ -3395,7 +3200,6 @@ GameObject:
   - component: {fileID: 8170196535004383181}
   - component: {fileID: 2460727233096892677}
   - component: {fileID: 7602292911388302475}
-  - component: {fileID: 7602292911388302472}
   m_Layer: 0
   m_Name: lib_rus_soldier.029
   m_TagString: Untagged
@@ -3487,20 +3291,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &7602292911388302472
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8108702877382083749}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.039920032
-  m_Height: 0.13402477
-  m_Direction: 1
-  m_Center: {x: -0.099238575, y: 1.0750864, z: 0.11998971}
 --- !u!1 &8381041202610721000
 GameObject:
   m_ObjectHideFlags: 0
@@ -3511,7 +3301,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4639043713038080805}
   - component: {fileID: 5710301491755008756}
-  - component: {fileID: 7602292911444672671}
   m_Layer: 0
   m_Name: lib_rus_soldier.006
   m_TagString: Untagged
@@ -3587,20 +3376,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 14.296623, y: 8.651862, z: 8.861187}
     m_Extent: {x: 8.685665, y: 9.470651, z: 7.789795}
   m_DirtyAABB: 0
---- !u!136 &7602292911444672671
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8381041202610721000}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.09374571
-  m_Height: 0.20505358
-  m_Direction: 1
-  m_Center: {x: 0.13243008, y: 1.0694923, z: 0.090146914}
 --- !u!1 &8392172154946036333
 GameObject:
   m_ObjectHideFlags: 0
@@ -3673,7 +3448,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8018418261713356990}
   - component: {fileID: 8432909400684611111}
-  - component: {fileID: 7602292912010499589}
   m_Layer: 0
   m_Name: lib_rus_soldier.002
   m_TagString: Untagged
@@ -3757,20 +3531,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.6126118, y: 41.584095, z: -7.4694386}
     m_Extent: {x: 28.655874, y: 24.832493, z: 25.572252}
   m_DirtyAABB: 0
---- !u!136 &7602292912010499589
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8572433677440158738}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.30759397
-  m_Height: 0.5485016
-  m_Direction: 1
-  m_Center: {x: 0.0017813873, y: 1.3872166, z: -0.10817844}
 --- !u!1 &8740466153623155288
 GameObject:
   m_ObjectHideFlags: 0
@@ -3781,7 +3541,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3425273621158642048}
   - component: {fileID: 3010926798349680636}
-  - component: {fileID: 7602292911743766173}
   m_Layer: 0
   m_Name: lib_rus_soldier.009
   m_TagString: Untagged
@@ -3858,20 +3617,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -11.049148, y: 8.216215, z: 9.957705}
     m_Extent: {x: 7.939845, y: 7.4639688, z: 8.863562}
   m_DirtyAABB: 0
---- !u!136 &7602292911743766173
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8740466153623155288}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.09913284
-  m_Height: 0.1665285
-  m_Direction: 1
-  m_Center: {x: -0.1177783, y: 1.0711747, z: 0.08568561}
 --- !u!1 &8747175298924787309
 GameObject:
   m_ObjectHideFlags: 0

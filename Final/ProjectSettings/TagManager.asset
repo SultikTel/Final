@@ -10,6 +10,7 @@ TagManager:
   - Panzer2
   - Bullets
   - bullet_rpg
+  - points
   layers:
   - Default
   - TransparentFX

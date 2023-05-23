@@ -6186,9 +6186,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpHeight: 1
-  jumpTime: 0.5
-  groundDistance: 0.2
   groundMask:
     serializedVersion: 2
     m_Bits: 256
@@ -6196,6 +6193,9 @@ MonoBehaviour:
   controller: {fileID: 2726680085170339717}
   CheckGround: {fileID: 3616946715402200189}
   camera: {fileID: 4872726463421157364}
+  bazooka: {fileID: 0}
+  source: {fileID: 0}
+  sound_reload: {fileID: 0}
   maxHealth: 100
   currentHealth: 0
   damage: 1
@@ -11781,7 +11781,7 @@ GameObject:
   - component: {fileID: 515504610101316817}
   - component: {fileID: 2360880162301196315}
   - component: {fileID: 4306421526859946447}
-  - component: {fileID: 4306421526859946444}
+  - component: {fileID: 6170904225482136594}
   m_Layer: 0
   m_Name: bazooka
   m_TagString: Untagged
@@ -11865,7 +11865,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020000005, y: 0.00316298, z: 0.0014010343}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4306421526859946444
+--- !u!114 &6170904225482136594
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11874,22 +11874,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 4306421526859946446}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 236fcea5f4a4ec44d8139680c03ade85, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c2821b2ff5b7db4e8df405f2eabb729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCamera: {fileID: 4872726463421157364}
+  MainCamera: {fileID: 0}
   current_ammo: 0
   magazine: 3
   count: 0
   gamemanager: {fileID: 0}
-  shoot: {fileID: 8300000, guid: 78e4e15d7b1483e4eac6a81ce2b98d5d, type: 3}
-  fire: {fileID: 3963750819114311566}
-  Vzriv: {fileID: 1449268238534436890, guid: ee9e9e83261bc414fae99f20745d08ec, type: 3}
-  bullet_impact: {fileID: 100002, guid: bc8d2212c2ce5ef459edd17d2d63da64, type: 3}
+  shoot: {fileID: 0}
+  reload_text: {fileID: 0}
+  fire: {fileID: 0}
+  Vzriv: {fileID: 0}
+  vzriv_gameobject: {fileID: 0}
+  bullet_impact: {fileID: 0}
+  panzer_destroyed: {fileID: 0}
   exploded: 0
-  panzer: {fileID: 2464235786309412926, guid: f85fad9f0db9d764cb7ad045c118a7b7, type: 3}
-  panzer_destroyed: {fileID: 2419308861321221901, guid: 2053d706094e0eb4d92fb0cb53e2ed65,
-    type: 3}
+  bullet_prefab: {fileID: 0}
 --- !u!1 &4437498823890822883
 GameObject:
   m_ObjectHideFlags: 0
