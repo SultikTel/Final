@@ -69,21 +69,26 @@ public class Bazooka2 : MonoBehaviour
         if (Physics.Raycast(MainCamera.transform.position, MainCamera.transform.forward, out RaycastHit Hitinfo, 100))
         {
             Debug.Log(Hitinfo.transform.name);
-            if (Hitinfo.transform.CompareTag("Panzer"))
+            if (Hitinfo.transform.CompareTag("Panzer")) //to destroy tanks
             {
                 count += 1;
                 panzer = Hitinfo.transform.gameObject;
             }
-        
-            if (Hitinfo.rigidbody != null)
+            if(Hitinfo.transform.CompareTag("germans")) //to destroy germans soldier
+            {
+                print("germans");
+                Target health_bar_enemy = Hitinfo.transform.GetComponent<Target>();
+                health_bar_enemy.Die();
+            }
+            if (Hitinfo.rigidbody != null) // to make objects move from bullets
             {
                 Hitinfo.rigidbody.AddForce(-Hitinfo.normal * 80);
             }
 
-            GameObject impact_clone = Instantiate(bullet_impact, Hitinfo.point, Quaternion.LookRotation(Hitinfo.normal));
+            GameObject impact_clone = Instantiate(bullet_impact, Hitinfo.point, Quaternion.LookRotation(Hitinfo.normal)); //to put effects billet impact
             Destroy(impact_clone, 1.5f);
 
-            GameObject boom = Instantiate(vzriv_gameobject, Hitinfo.point, Quaternion.LookRotation(Hitinfo.normal));
+            GameObject boom = Instantiate(vzriv_gameobject, Hitinfo.point, Quaternion.LookRotation(Hitinfo.normal)); //to put effect vzriv
             Destroy(boom, 2f);
         }
     }

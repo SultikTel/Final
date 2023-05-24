@@ -14,14 +14,14 @@ public class Target : MonoBehaviour
         {
             //health = 50;
             Die();
-            if(wavecontroller.GetComponent<WaveController>()!= false)
-            {
-                wavecontroller.GetComponent<WaveController>().EnemyDead();
-            }
         }
     }
-    void Die()
+    public void Die()
     {
+        if(wavecontroller.GetComponent<WaveController>()!= false)
+        {
+            wavecontroller.GetComponent<WaveController>().EnemyDead();
+        }
         gameObject.SetActive(false);
         NPC_Ragdoll.SetActive(true);
         Instantiate(NPC_Ragdoll, transform.position, transform.rotation);

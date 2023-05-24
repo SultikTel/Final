@@ -11,6 +11,7 @@ TagManager:
   - Bullets
   - bullet_rpg
   - points
+  - germans
   layers:
   - Default
   - TransparentFX
