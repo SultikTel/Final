@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    public AudioSource audioSource;
     public Text dialogue;
     public string[] sentences;
-    float speedText = 1f;
+    float speedText = 2f;
+    public AudioClip[] clips;
     int index = 0;
     // Start is called before the first frame update
     void Start()
@@ -33,6 +35,7 @@ public class DialogueManager : MonoBehaviour
         dialogue.text = string.Empty;
         index = 0;
         StartCoroutine(TypeSentences());
+        audioSource.PlayOneShot(clips[index]);
     }
 
     public void NextSentences()
@@ -41,6 +44,7 @@ public class DialogueManager : MonoBehaviour
         {
             index++;
             dialogue.text = string.Empty;
+            audioSource.PlayOneShot(clips[index]);
         }else 
         {
             gameObject.SetActive(false);
@@ -57,7 +61,7 @@ public class DialogueManager : MonoBehaviour
         }
         else {
             StopAllCoroutines();
-            dialogue.text = sentences[index];
+            gameObject.SetActive(false);
         }
     }
 }
