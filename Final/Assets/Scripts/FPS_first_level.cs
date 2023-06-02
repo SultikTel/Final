@@ -20,6 +20,7 @@ public class FPS_first_level : MonoBehaviour
     public GameObject bazooka;
     public AudioSource source;
     public AudioClip sound_reload;
+
     //Health script
     public float maxHealth = 100f;
     public float currentHealth = 0f;
@@ -49,7 +50,7 @@ public class FPS_first_level : MonoBehaviour
             isJumping = true;
             jumpVelocity = Mathf.Sqrt(-2.0f * gravity * jumpHeight);
         }
-        if(isGrounded && velocity.y < 0)
+        if(isGrounded && velocity.y > 10f)
         {
             isJumping = false;
             velocity.y = -2f;
