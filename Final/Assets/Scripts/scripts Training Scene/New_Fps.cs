@@ -38,7 +38,7 @@ public class New_Fps : MonoBehaviour
         bool isGrounded = Physics.CheckSphere(G_O.position, groundDistance, groundMask);
 
         // Если объект на земле, то сбрасываем скорость прыжка и устанавливаем isJumping в false
-        if (isGrounded && velocity.y < 0)
+        if (isGrounded && velocity.y < 10f)
         {
             velocity.y = -2f;
             isJumping = false;
