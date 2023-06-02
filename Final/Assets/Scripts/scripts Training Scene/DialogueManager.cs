@@ -2,49 +2,62 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
     public Text dialogue;
     public string[] sentences;
-    public int index;
-    public bool isActive = false;
-    public GameObject ActiveDialogueCollider;
+    float speedText = 1f;
+    int index = 0;
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.SetActive(false);
+        StartDialogue();
     }
-    // Update is called once per frame
     void Update()
     {
-        dialogue.text = sentences[index];
-        if(isActive){
-         if(Input.GetKeyDown(KeyCode.L))
-          {
-            if(dialogue.text == sentences[index])
-            {
-                NextSentences();
-            }else 
-            dialogue.text = sentences[index];
-          }
+        EnterNewText();
+    }
+
+    IEnumerator TypeSentences()
+    {
+        foreach(char c in sentences[index].ToCharArray())
+        {
+            dialogue.text += c;
+            yield return new WaitForSeconds(speedText);
         }
     }
+
     public void StartDialogue()
     {
-        gameObject.SetActive(true);
+        dialogue.text = string.Empty;
+        index = 0;
+        StartCoroutine(TypeSentences());
     }
+
     public void NextSentences()
     {
-         if(index < sentences.Length - 1)
-         {
+        if(index < sentences.Length - 1)
+        {
             index++;
-            dialogue.text = sentences[index];
-         }else {
+            dialogue.text = string.Empty;
+        }else 
+        {
             gameObject.SetActive(false);
-            index = 0;
-            ActiveDialogueCollider.SetActive(true);
-         }
+        }
+    }
+    public void EnterNewText()
+    {
+        if(dialogue.text == sentences[index])
+        {
+            if(Input.GetKeyDown(KeyCode.Return))
+            {
+               NextSentences();
+            }
+        }
+        else {
+            StopAllCoroutines();
+            dialogue.text = sentences[index];
+        }
     }
 }
