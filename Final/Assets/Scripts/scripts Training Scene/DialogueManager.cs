@@ -24,7 +24,7 @@ public class DialogueManager : MonoBehaviour
     IEnumerator TypeSentences()
     {
         foreach(char c in sentences[index].ToCharArray())
-        {
+        {   
             dialogue.text += c;
             yield return new WaitForSeconds(speedText);
         }
@@ -44,6 +44,7 @@ public class DialogueManager : MonoBehaviour
         {
             index++;
             dialogue.text = string.Empty;
+            StartCoroutine(TypeSentences());
             audioSource.PlayOneShot(clips[index]);
         }else 
         {
@@ -52,16 +53,17 @@ public class DialogueManager : MonoBehaviour
     }
     public void EnterNewText()
     {
-        if(dialogue.text == sentences[index])
+        if(dialogue.text.Length == sentences[index].Length)
         {
             if(Input.GetKeyDown(KeyCode.Return))
             {
+               print("Enter is working");
                NextSentences();
             }
         }
         else {
             StopAllCoroutines();
-            gameObject.SetActive(false);
+            dialogue.text = sentences[index];
         }
     }
 }

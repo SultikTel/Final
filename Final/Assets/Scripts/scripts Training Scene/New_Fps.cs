@@ -24,6 +24,8 @@ public class New_Fps : MonoBehaviour
     public float Maxhealth = 100;
     public float currentHealth;
     public HealthBar hb;
+
+    public move_npc npc;
     // Start is called before the first frame update
     void Start()
     {
@@ -75,6 +77,11 @@ public class New_Fps : MonoBehaviour
         }else {
             controller.height = 2f;
              cam.transform.localPosition = new Vector3(0, 0.2367195f, 0);
+        }
+
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            npc.GetComponent<move_npc>().SetDestination = true;
         }
     }
     public void TakeDamage()
