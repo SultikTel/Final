@@ -15,6 +15,8 @@ public class LevelGoing : MonoBehaviour
     public Text tasks;
     public Text enemiesLeft;
 
+    public FPS_first_level fps;
+
 
 
     // Start is called before the first frame update
@@ -49,6 +51,8 @@ public class LevelGoing : MonoBehaviour
             if (waveRightNow == 1)
             {
                 FirstWavePassed();
+
+                Save();
             }
             else
             {
@@ -101,5 +105,40 @@ public class LevelGoing : MonoBehaviour
         text.gameObject.SetActive(true);
         yield return new WaitForSeconds(2f);
         text.gameObject.SetActive(false);
+    }
+
+
+
+
+    public void Save()
+    {
+        SerializationManager.Save(this, fps);
+    }
+
+    public void Load()
+    {
+        LevelState data =  SerializationManager.Load();
+        fps.currentHealth = data.playerHealth;
+        Vector3 position;
+        position.x = data.playerPosition[0];
+        position.y = data.playerPosition[1];
+        position.z = data.playerPosition[2];
+        fps.transform.position = position;
+
+        if (waveRightNow == 1)
+        {
+            enemy = new ArrayList(FindObjectsOfType<EnemyBySultan>());
+
+            foreach (EnemyBySultan i in enemy)
+            {
+                if (i.isFirstwave == true)
+                {
+                    i.getFade();
+                }
+
+            }
+
+            FirstWavePassed();
+        }
     }
 }
