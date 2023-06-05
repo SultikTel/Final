@@ -15,7 +15,13 @@ public class LevelGoing : MonoBehaviour
     public Text tasks;
     public Text enemiesLeft;
 
+    public Checkpoint_1 chekpoint;
+
     public FPS_first_level fps;
+
+    public GameObject fps_transform;
+
+    public HealthBar health;
 
 
 
@@ -39,7 +45,30 @@ public class LevelGoing : MonoBehaviour
         numEnemiesRightNow = enemiesRightNow.Count;
         tasks.text = "Очистить станцию";
         enemiesLeft.text= "Осталось врагов:" + numEnemiesRightNow.ToString();
-        
+
+
+        chekpoint = GetComponent<Checkpoint_1>();
+
+
+
+
+
+
+        if (PlayerPrefs.GetInt("LoadedBySave1") == 1)
+        {
+
+            fps.currentHealth = PlayerPrefs.GetFloat("Hp_onfirstSave");
+            fps_transform.transform.position = new Vector3(PlayerPrefs.GetFloat("X_onfirstSave"), PlayerPrefs.GetFloat("Y_onfirstSave"), PlayerPrefs.GetFloat("Z_onfirstSave"));
+            Debug.Log(PlayerPrefs.GetFloat("Hp_onfirstSave"));
+            fps.TakeDamage();
+            PlayerPrefs.SetInt("LoadedBySave1", 0);
+
+
+        }
+
+
+
+
     }
 
     // Update is called once per frame
@@ -83,6 +112,9 @@ public class LevelGoing : MonoBehaviour
 
         tasks.text = "Очистить деревню";
 
+        Debug.Log("Norm");
+        chekpoint.Save(fps.currentHealth,fps_transform.transform,2);
+
     }
 
     public void SecondWavePassed()
@@ -115,30 +147,10 @@ public class LevelGoing : MonoBehaviour
         SerializationManager.Save(this, fps);
     }
 
-    public void Load()
-    {
-        LevelState data =  SerializationManager.Load();
-        fps.currentHealth = data.playerHealth;
-        Vector3 position;
-        position.x = data.playerPosition[0];
-        position.y = data.playerPosition[1];
-        position.z = data.playerPosition[2];
-        fps.transform.position = position;
+    
 
-        if (waveRightNow == 1)
-        {
-            enemy = new ArrayList(FindObjectsOfType<EnemyBySultan>());
 
-            foreach (EnemyBySultan i in enemy)
-            {
-                if (i.isFirstwave == true)
-                {
-                    i.getFade();
-                }
 
-            }
 
-            FirstWavePassed();
-        }
-    }
+
 }

@@ -37,7 +37,7 @@ public class FPS_first_level : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         float horizontal  = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
