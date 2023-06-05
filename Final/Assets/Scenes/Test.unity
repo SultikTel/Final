@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13850,14 +13850,14 @@ MonoBehaviour:
   MainCamera: {fileID: 8403000817011520022}
   fire: {fileID: 1357007669091170434}
   bullet_impact: {fileID: 100002, guid: 3b1fe0d0dc796bf46b1460e5a70bd078, type: 3}
-  sound: {fileID: 8300000, guid: 4e6ad2f800f9cf44fa700763f6d14fd1, type: 3}
+  gameManager: {fileID: 1440749855}
+  shoot: {fileID: 8300000, guid: 4e6ad2f800f9cf44fa700763f6d14fd1, type: 3}
   sound2: {fileID: 8300000, guid: 65f3af8ed97941842b8805a6e4bcdf2e, type: 3}
   walking_sound: {fileID: 1357007670122922816}
   message1: {fileID: 1627434186}
   current_ammo: 0
   max_ammo: 5
   damage: 10
-  gm: {fileID: 1440749856}
 --- !u!1 &2167470126331702253
 GameObject:
   m_ObjectHideFlags: 0
