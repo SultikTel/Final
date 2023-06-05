@@ -15,7 +15,7 @@ public class LevelGoing : MonoBehaviour
     public Text tasks;
     public Text enemiesLeft;
 
-    public Checkpoint_1 chekpoint;
+    public Checkpoint_1 checkpoint;
 
     public FPS_first_level fps;
 
@@ -47,12 +47,7 @@ public class LevelGoing : MonoBehaviour
         enemiesLeft.text= "Осталось врагов:" + numEnemiesRightNow.ToString();
 
 
-        chekpoint = GetComponent<Checkpoint_1>();
-
-
-
-
-
+        checkpoint = GetComponent<Checkpoint_1>();
 
         if (PlayerPrefs.GetInt("LoadedBySave1") == 1)
         {
@@ -62,13 +57,7 @@ public class LevelGoing : MonoBehaviour
             Debug.Log(PlayerPrefs.GetFloat("Hp_onfirstSave"));
             fps.TakeDamage();
             PlayerPrefs.SetInt("LoadedBySave1", 0);
-
-
         }
-
-
-
-
     }
 
     // Update is called once per frame
@@ -81,7 +70,7 @@ public class LevelGoing : MonoBehaviour
             {
                 FirstWavePassed();
 
-                Save();
+                checkpoint.Save(PlayerPrefs.GetFloat("Hp_onfirstSave"), fps_transform.transform, 2);
             }
             else
             {
@@ -113,7 +102,7 @@ public class LevelGoing : MonoBehaviour
         tasks.text = "Очистить деревню";
 
         Debug.Log("Norm");
-        chekpoint.Save(fps.currentHealth,fps_transform.transform,2);
+        checkpoint.Save(fps.currentHealth,fps_transform.transform,2);
 
     }
 
@@ -138,19 +127,5 @@ public class LevelGoing : MonoBehaviour
         yield return new WaitForSeconds(2f);
         text.gameObject.SetActive(false);
     }
-
-
-
-
-    public void Save()
-    {
-        SerializationManager.Save(this, fps);
-    }
-
-    
-
-
-
-
 
 }

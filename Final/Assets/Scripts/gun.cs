@@ -9,7 +9,8 @@ public class gun : MonoBehaviour
     public Camera MainCamera;
     public ParticleSystem fire;
     public GameObject bullet_impact;
-    public AudioClip sound;
+    public AudioSource gameManager;
+    public AudioClip shoot;
     public AudioClip sound2;
     public AudioSource walking_sound;
     public GameObject message1;
@@ -17,8 +18,7 @@ public class gun : MonoBehaviour
     public int max_ammo = 5;
     public int damage;
     private bool isReloading = false;
-    //other scripts
-    public GameManager gm;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +36,7 @@ public class gun : MonoBehaviour
             current_ammo -= 1;
             Shoot(); //Active shoot function
             fire.Play(); //particle system fire
-            gm.PlaySound(sound); // sound while shooting
+            gameManager.PlayOneShot(shoot); // sound while shooting
             animator.SetBool("shoot", true); //animation for shoot
         }
         if(Input.GetMouseButtonUp(0)) 
@@ -113,7 +113,7 @@ public class gun : MonoBehaviour
     }
     void PlaySoundReload()
     {
-        gm.PlaySound(sound2);
+        gameManager.PlayOneShot(sound2); 
     }
     public IEnumerator Reloading()
     {
