@@ -7,7 +7,6 @@ public class New_Fps : MonoBehaviour
     public float speed;
     public float damage = 1f;
     public float jumpHeight = 1.0f;
-    public float jumpTime = 0.5f;
     public float groundDistance = 0.2f;
     public LayerMask groundMask;
     public bool isJumping = false;
@@ -19,13 +18,16 @@ public class New_Fps : MonoBehaviour
     public Camera cam;
 
     public AudioClip clip;
-    public GameManager gm;
     public Animator animator;
     public float Maxhealth = 100;
     public float currentHealth;
     public HealthBar hb;
 
-    public move_npc npc;
+    public move_npc npc1;
+    public move_npc npc2;
+    public move_npc npc3;
+    public move_npc npc4;
+    public move_npc npc5;
     // Start is called before the first frame update
     void Start()
     {
@@ -81,7 +83,11 @@ public class New_Fps : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.R))
         {
-            npc.GetComponent<move_npc>().SetDestination = true;
+            npc1.GetComponent<move_npc>().SetDestination = true;
+            npc2.GetComponent<move_npc>().SetDestination = true;
+            npc3.GetComponent<move_npc>().SetDestination = true;
+            npc5.GetComponent<move_npc>().SetDestination = true;
+            npc4.GetComponent<move_npc>().SetDestination = true;
         }
     }
     public void TakeDamage()
