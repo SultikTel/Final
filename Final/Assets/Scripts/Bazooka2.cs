@@ -68,7 +68,7 @@ public class Bazooka2 : MonoBehaviour
     {
         if (Physics.Raycast(MainCamera.transform.position, MainCamera.transform.forward, out RaycastHit Hitinfo, 100))
         {
-            Debug.Log(Hitinfo.transform.name);
+            //Debug.Log(Hitinfo.transform.name);
             if (Hitinfo.transform.CompareTag("Panzer")) //to destroy tanks
             {
                 count += 1;

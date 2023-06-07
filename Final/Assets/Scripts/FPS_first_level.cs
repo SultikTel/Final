@@ -7,7 +7,7 @@ public class FPS_first_level : MonoBehaviour
 {
     public float speed;
     private float jumpHeight = 1.0f;
-    private float jumpTime = 0.5f;
+    //private float jumpTime = 0.5f;
     private float groundDistance = 0.2f;
     public LayerMask groundMask;
     public bool isJumping = false;
@@ -99,7 +99,6 @@ public class FPS_first_level : MonoBehaviour
         {
             if(bazooka.GetComponent<Bazooka2>().current_ammo == 0)
             {
-                print("work");
                 source.PlayOneShot(sound_reload);
                 bazooka.GetComponent<Bazooka2>().current_ammo = 3;
                 bazooka.GetComponent<Bazooka2>().reload_text.GetComponent<Text>().text = "Bazooka Ammo: " + bazooka.GetComponent<Bazooka2>().current_ammo.ToString();

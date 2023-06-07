@@ -80,7 +80,7 @@ public class gun : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(MainCamera.transform.position, MainCamera.transform.forward, out hit, 100))
         {
-            Debug.Log(hit.transform.name);
+            //Debug.Log(hit.transform.name); //to print of name gameobject to triggered by weapon
 
             //Edited by Sultan
 

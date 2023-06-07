@@ -2982,7 +2982,7 @@ GameObject:
   - component: {fileID: 197177104}
   m_Layer: 0
   m_Name: Wave1Unit3
-  m_TagString: Enemy
+  m_TagString: germans
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9756,7 +9756,7 @@ GameObject:
   - component: {fileID: 535037089}
   m_Layer: 0
   m_Name: Wave1Unit4
-  m_TagString: Enemy
+  m_TagString: germans
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9947,7 +9947,7 @@ GameObject:
   - component: {fileID: 537774751}
   m_Layer: 0
   m_Name: Wave2Unit4
-  m_TagString: Enemy
+  m_TagString: germans
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15309,7 +15309,7 @@ GameObject:
   - component: {fileID: 868757613}
   m_Layer: 0
   m_Name: Wave2Unit1
-  m_TagString: Enemy
+  m_TagString: germans
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17475,7 +17475,7 @@ GameObject:
   - component: {fileID: 992204295}
   m_Layer: 0
   m_Name: Wave1Unit1
-  m_TagString: Enemy
+  m_TagString: germans
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22327,7 +22327,7 @@ GameObject:
   - component: {fileID: 1303457186}
   m_Layer: 0
   m_Name: Wave2Unit3
-  m_TagString: Enemy
+  m_TagString: germans
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30183,7 +30183,7 @@ GameObject:
   - component: {fileID: 1798594954}
   m_Layer: 0
   m_Name: Wave1Unit2
-  m_TagString: Enemy
+  m_TagString: germans
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30967,10 +30967,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d077a2414da24ad48819ec2b2cebe69b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  first_team: {fileID: 65891290}
-  second_team: {fileID: 1586103927}
-  third_team: {fileID: 1337536692}
-  numEnemiesRightNow: 0
+  teams:
+  - {fileID: 65891290}
+  - {fileID: 1586103927}
+  - {fileID: 1337536692}
   WaveText: {fileID: 183336475}
   WaveTextGameObject: {fileID: 183336473}
 --- !u!4 &1838680602
@@ -35226,7 +35226,7 @@ GameObject:
   - component: {fileID: 2076867372}
   m_Layer: 0
   m_Name: Wave2Unit2
-  m_TagString: Enemy
+  m_TagString: germans
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36810,7 +36810,7 @@ MonoBehaviour:
   walking_sound: {fileID: 658964124193806674}
   message1: {fileID: 1000712412}
   current_ammo: 0
-  max_ammo: 5
+  max_ammo: 20
   damage: 10
 --- !u!1 &424593667750212095
 GameObject:
@@ -42019,7 +42019,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 5.59e-43, y: 7.1e-44, z: 0, w: 1.03469905e-17}
+  m_BoundingSphereOverride: {x: 9.948e-42, y: 1.02e-43, z: 244.43129, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -42039,7 +42039,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &659743124520348258
 GameObject:
   m_ObjectHideFlags: 0
@@ -42102,7 +42102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55d73069f31f1b0479ff106a9e4874bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 4
+  mouseSensitivity: 6
   player: {fileID: 658964124075907194}
 --- !u!81 &706062881453447900
 AudioListener:

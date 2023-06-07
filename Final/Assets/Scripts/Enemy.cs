@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public float fireRate = 1f;
     public float damage = 1f;
-    public float range = 100f;
+    public float range = 10f;
     public Transform player;
     public Animator anim;
     private float nextFireTime = 0f;
@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
         anim = GetComponent<Animator>();
     }
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if(Time.time > nextFireTime) 
         {

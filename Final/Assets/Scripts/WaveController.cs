@@ -5,35 +5,37 @@ using UnityEngine.UI;
 
 public class WaveController : MonoBehaviour
 {
-    public GameObject first_team;
-    public GameObject second_team;
-    public GameObject third_team;
-    public int numEnemiesRightNow;
+    public GameObject[] teams;
+    int index;
+    int numEnemiesRightNow;
     public Text WaveText;
     public GameObject WaveTextGameObject;
     void Start()
     {
-        third_team.SetActive(false);
-        second_team.SetActive(false);
-        numEnemiesRightNow = first_team.transform.childCount;
+        index = 0;
+        teams[1].SetActive(false);
+        teams[2].SetActive(false);
+        numEnemiesRightNow = teams[index].transform.childCount;
         WaveTextGameObject.SetActive(false);
     }
 
-    
     public void EnemyDead()
     {
-        numEnemiesRightNow--;
-         if(numEnemiesRightNow == 0)
+      numEnemiesRightNow--;
+      if(numEnemiesRightNow == 0){
+        if(index < teams.Length - 1)
         {
-            second_team.SetActive(true); 
-            WaveText.text = "First wave is passed";  
+            index++;
+            teams[index].SetActive(true); 
+            WaveText.text = "Wave" + index + " is passed";  
             StartCoroutine(ShowText());
-            if(second_team.transform.childCount == 0)
-            {
-               third_team.SetActive(true);
-               WaveText.text = "Second wave is passed";
-            }
+            print(index);
+            numEnemiesRightNow = teams[index].transform.childCount;
+        }else {
+            WaveText.text = "All wave is passed";
+            StartCoroutine(ShowText());
         }
+      }
     }
     IEnumerator ShowText()
     {
@@ -41,16 +43,4 @@ public class WaveController : MonoBehaviour
         yield return new WaitForSeconds(3f);
         WaveTextGameObject.SetActive(false);
     }
-    /*void ChangeTextValue()
-    {
-        if(Second_Otryad())
-        {
-            WaveText.text = "First wave is passed.";
-        }
-    }
-    bool Second_Otryad()
-    {
-        second_team.SetActive(true);
-        return true;
-    }*/
 }
