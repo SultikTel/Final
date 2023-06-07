@@ -6038,8 +6038,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: NexLevel
+      - m_Target: {fileID: 1949397066}
+        m_MethodName: NextLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17050,6 +17050,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1949397067}
   - component: {fileID: 1949397065}
+  - component: {fileID: 1949397066}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -17153,6 +17154,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1949397066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949397064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f583bab3d37c5a40919ba8e9259eb50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1949397067
 Transform:
   m_ObjectHideFlags: 0

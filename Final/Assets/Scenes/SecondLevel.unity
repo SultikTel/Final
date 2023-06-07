@@ -5122,7 +5122,7 @@ MonoBehaviour:
   German_Ragdoll: {fileID: 885332317472108417, guid: 0834ae6af6e1e4b40958cb09a835432e,
     type: 3}
   health: 50
-  lvl: {fileID: 1133909902}
+  lvl: {fileID: 0}
 --- !u!114 &347455298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6660,7 +6660,7 @@ MonoBehaviour:
   German_Ragdoll: {fileID: 885332317472108417, guid: 0834ae6af6e1e4b40958cb09a835432e,
     type: 3}
   health: 50
-  lvl: {fileID: 1133909902}
+  lvl: {fileID: 0}
 --- !u!114 &458036878
 MonoBehaviour:
   m_ObjectHideFlags: 0
