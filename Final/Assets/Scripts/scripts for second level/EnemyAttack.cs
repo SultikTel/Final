@@ -2,21 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class EnemyAttack : MonoBehaviour
 {
     public float fireRate = 1f;
     public float damage = 1f;
-    public float range = 10f;
+    public float range;
     public Transform player;
     public Animator anim;
     private float nextFireTime = 0f;
     public AudioSource source;
     public AudioClip fire_sound;
     public AudioClip hurt_sound;
-
+    public bool isAttack;
+    public GameObject FPS;
+    //public bool isAttack;
     void Start() 
     {
         anim = GetComponent<Animator>();
+        isAttack = false;
     }
     // Update is called once per frame
     void Update()
@@ -26,22 +29,32 @@ public class Enemy : MonoBehaviour
             nextFireTime = Time.time + 1f / fireRate;
             ShootEnemy();
           }
+
+          LookAtFps();
     }
     public void ShootEnemy() 
     {
+        // anim.SetBool("shoot_enemy", true);
+        isAttack = true;
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, range)) {
             if (hit.transform.CompareTag("Player")) {
-                anim.SetBool("shoot_enemy", true);
                 hit.transform.GetComponent<FPS_first_level>().TakeDamage();
                 PlaySound();
-            }else
-            anim.SetBool("shoot_enemy", false);
+            }
             FPS_first_level fps = hit.transform.GetComponent<FPS_first_level>();
             if(fps != null)
             {
                 source.PlayOneShot(hurt_sound);
             }
+        }
+        isAttack = false;
+    }
+    void LookAtFps()
+    {
+        if(isAttack)
+        {
+            transform.LookAt(FPS.transform.position);
         }
     }
     void PlaySound()
