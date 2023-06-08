@@ -18,7 +18,7 @@ public class gun : MonoBehaviour
     public int max_ammo = 5;
     public int damage;
     private bool isReloading = false;
-   
+    Enemy enemy_attack;
     // Start is called before the first frame update
     void Start()
     {
@@ -100,6 +100,11 @@ public class gun : MonoBehaviour
             if(enemy != null)
             {
                 enemy.TakeDamage(damage);
+            }
+            HealthEnemy health_enemy = hit.transform.GetComponent<HealthEnemy>();
+            if(health_enemy != null)
+            {
+                health_enemy.TakeDamage(damage);
             }
             
             

@@ -10,6 +10,7 @@ public class AI_Patrol : MonoBehaviour
     int new_point;
     bool stay = true;
     Animator anim;
+    public GameObject FPS;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,19 +26,21 @@ public class AI_Patrol : MonoBehaviour
 
         if(transform.position == points[random_point].position)
         {
-            if(stay == true){
-            StartCoroutine(Stay());
-            } 
+            if(stay == true)
+            {
+              StartCoroutine(Stay());
+            }
         }
     }
     void MovingToDestination()
     {
             transform.position = Vector3.MoveTowards(transform.position, points[random_point].position, speed * Time.deltaTime);
-            transform.LookAt(points[random_point].position);
+            //transform.LookAt(points[random_point].position);
     }
     IEnumerator Stay()
     {
         stay = false;
+        transform.LookAt(FPS.transform.position);
         yield return new WaitForSeconds(3f);
         while(new_point == random_point)
         {
