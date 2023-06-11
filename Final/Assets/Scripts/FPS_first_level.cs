@@ -39,37 +39,41 @@ public class FPS_first_level : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontal  = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
-        Vector3 move = transform.right * horizontal + transform.forward * vertical;
-        controller.Move(move * speed * Time.deltaTime);
+        
+            float horizontal = Input.GetAxis("Horizontal");
+            float vertical = Input.GetAxis("Vertical");
+            Vector3 move = transform.right * horizontal + transform.forward * vertical;
+            controller.Move(move * speed * Time.deltaTime);
 
-        bool isGrounded = Physics.CheckSphere(CheckGround.position, groundDistance, groundMask);
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            isJumping = true;
-            jumpVelocity = Mathf.Sqrt(-2.0f * gravity * jumpHeight);
+            bool isGrounded = Physics.CheckSphere(CheckGround.position, groundDistance, groundMask);
+            if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+            {
+                isJumping = true;
+                jumpVelocity = Mathf.Sqrt(-2.0f * gravity * jumpHeight);
+            }
+            if (isGrounded && velocity.y > 10f)
+            {
+                isJumping = false;
+                velocity.y = -2f;
+            }
+            if (isJumping)
+            {
+                controller.Move(Vector3.up * (jumpVelocity * Time.deltaTime));
+                jumpVelocity += gravity * Time.deltaTime;
+            }
+            //SitDown
+            if (Input.GetKey(KeyCode.C))
+            {
+                controller.height = 1f;
+                camera.transform.localPosition = new Vector3(0, -0.36f, 0);
+            }
+            else
+            {
+                controller.height = 2f;
+                camera.transform.localPosition = new Vector3(0, 0.2367195f, 0);
+            }
         }
-        if(isGrounded && velocity.y > 10f)
-        {
-            isJumping = false;
-            velocity.y = -2f;
-        }
-        if(isJumping)
-        {
-            controller.Move(Vector3.up * (jumpVelocity * Time.deltaTime));
-            jumpVelocity += gravity * Time.deltaTime;
-        }
-         //SitDown
-        if(Input.GetKey(KeyCode.C))
-        {
-            controller.height = 1f;
-            camera.transform.localPosition = new Vector3(0, -0.36f, 0);
-        }else {
-            controller.height = 2f;
-             camera.transform.localPosition = new Vector3(0, 0.2367195f, 0);
-        }
-    }
+    
     public void TakeDamage()
     {
         currentHealth -= damage;
