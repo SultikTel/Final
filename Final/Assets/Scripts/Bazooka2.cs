@@ -32,7 +32,6 @@ public class Bazooka2 : MonoBehaviour
         exploded = false;
 
         reload_text.GetComponent<Text>().text = "Bazooka Ammo: " + current_ammo.ToString(); //Here i count how many bullets 
-        //i have left showing in the text 
     }
 
     // Update is called once per frame

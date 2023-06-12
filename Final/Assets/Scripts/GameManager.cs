@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
             first_weapon.SetActive(false);
             second_weapon.GetComponent<Bazooka2>().ActiveReloadText();
             first_weapon.GetComponent<gun>().message1.SetActive(false);
+            first_weapon.GetComponent<gun>().ammo_text.enabled = false;
             source.PlayOneShot(weapon_switch);
         }else if(Input.GetKeyDown(KeyCode.Keypad1))
         {
@@ -47,6 +48,7 @@ public class GameManager : MonoBehaviour
             first_weapon.SetActive(true);
             source.PlayOneShot(weapon_switch);
             second_weapon.GetComponent<Bazooka2>().Deactivation();
+            first_weapon.GetComponent<gun>().ammo_text.enabled = true;
             if(first_weapon.GetComponent<gun>().current_ammo == 0){
                 first_weapon.GetComponent<gun>().StartCoroutine(first_weapon.GetComponent<gun>().Reloading());
             }

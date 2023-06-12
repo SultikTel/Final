@@ -18,7 +18,7 @@ public class gun : MonoBehaviour
     public int max_ammo = 5;
     public int damage;
     private bool isReloading = false;
-    Enemy enemy_attack;
+    public Text ammo_text;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +26,7 @@ public class gun : MonoBehaviour
         fire.Stop();
         message1.SetActive(false);
         current_ammo = max_ammo;
+        ammo_text.text = "Kalashnik Ammo: " + current_ammo.ToString();
     }
     // Update is called once per frame
     void Update()
@@ -34,6 +35,7 @@ public class gun : MonoBehaviour
         if(Input.GetMouseButtonDown(0) && current_ammo > 0)
         {
             current_ammo -= 1;
+            ammo_text.text = "Kalashnik Ammo: " + current_ammo.ToString();
             Shoot(); //Active shoot function
             fire.Play(); //particle system fire
             gameManager.PlayOneShot(shoot); // sound while shooting
@@ -82,14 +84,6 @@ public class gun : MonoBehaviour
         {
             //Debug.Log(hit.transform.name); //to print of name gameobject to triggered by weapon
 
-            //Edited by Sultan
-
-            EnemyBySultan enemyBySultan = hit.collider.GetComponent<EnemyBySultan>();
-            if (enemyBySultan != null)
-            {
-                enemyBySultan.die();
-            }
-            //the ended by sultan
 
             Target target = hit.transform.GetComponent<Target>();
             if(target != null)
@@ -127,6 +121,7 @@ public class gun : MonoBehaviour
         animator.SetBool("reload", true);
         yield return new WaitForSeconds(3f);
         current_ammo = max_ammo;
+        ammo_text.text = "Kalashnik Ammo: " + current_ammo.ToString();
         animator.SetBool("reload", false);
         message1.SetActive(false);
         isReloading = false;
