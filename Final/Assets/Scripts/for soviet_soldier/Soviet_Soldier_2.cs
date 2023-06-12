@@ -6,6 +6,7 @@ public class Soviet_Soldier_2 : MonoBehaviour
 {
     public Animator animator;
     public bool anim_bool = false;
+    public FPS_first_level fps;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +17,9 @@ public class Soviet_Soldier_2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(anim_bool == true)
+        if(fps.currentHealth != 100)
         {
-            animator.SetBool("rifle_idle", true);
-        }else {
-            animator.SetBool("rifle_idle", false);
+            animator.SetBool("GunPlay", true);
         }
     }
 }
