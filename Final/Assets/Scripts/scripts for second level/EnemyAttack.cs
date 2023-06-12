@@ -39,11 +39,11 @@ public class EnemyAttack : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, range)) {
             if (hit.transform.CompareTag("Player")) {
-                hit.transform.GetComponent<FPS_first_level>().TakeDamage();
+                hit.transform.GetComponent<Sniper>().TakeDamage();
                 PlaySound();
             }
-            FPS_first_level fps = hit.transform.GetComponent<FPS_first_level>();
-            if(fps != null)
+            Sniper sniper = hit.transform.GetComponent<Sniper>();
+            if(sniper != null)
             {
                 source.PlayOneShot(hurt_sound);
             }

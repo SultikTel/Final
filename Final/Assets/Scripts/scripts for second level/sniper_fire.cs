@@ -12,7 +12,7 @@ public class sniper_fire : MonoBehaviour
     public AudioSource walking_sound;
     public GameObject message1;
     public int current_ammo;
-    public int max_ammo = 5;
+    public int max_ammo;
     public int damage;
     private bool isReloading = false;
     public GameObject camera_first;
@@ -115,7 +115,7 @@ public class sniper_fire : MonoBehaviour
     {
         isReloading = true;
         message1.SetActive(true);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.5f);
         current_ammo = max_ammo;
         message1.SetActive(false);
         isReloading = false;

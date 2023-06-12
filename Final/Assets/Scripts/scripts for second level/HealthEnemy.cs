@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HealthEnemy : MonoBehaviour
 {
-    int health = 50;
+    int health = 10;
     public GameObject enemy_ragdoll;
 
     

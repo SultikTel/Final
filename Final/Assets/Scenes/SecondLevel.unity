@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4506581, g: 0.668982, b: 0.6559596, a: 1}
+  m_IndirectSpecularColor: {r: 0.44989812, g: 0.66960996, b: 0.65621203, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8847,7 +8847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRate: 1
   damage: 1
-  range: 10
+  range: 25
   player: {fileID: 0}
   anim: {fileID: 622371880}
   source: {fileID: 138136358}
@@ -15021,7 +15021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRate: 1
   damage: 1
-  range: 10
+  range: 25
   player: {fileID: 0}
   anim: {fileID: 1025349011}
   source: {fileID: 138136358}
@@ -16325,7 +16325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRate: 1
   damage: 1
-  range: 10
+  range: 25
   player: {fileID: 0}
   anim: {fileID: 1095842107}
   source: {fileID: 138136358}
@@ -21305,7 +21305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRate: 1
   damage: 1
-  range: 10
+  range: 25
   player: {fileID: 0}
   anim: {fileID: 1371269393}
   source: {fileID: 138136358}
@@ -21682,7 +21682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRate: 1
   damage: 1
-  range: 10
+  range: 25
   player: {fileID: 0}
   anim: {fileID: 1393965847}
   source: {fileID: 138136358}
@@ -31761,6 +31761,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1516736548395924539, guid: 6616f36bd995d6b42a2b770419e10710,
         type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516736548395924539, guid: 6616f36bd995d6b42a2b770419e10710,
+        type: 3}
       propertyPath: message1
       value: 
       objectReference: {fileID: 1879728185}
@@ -31853,6 +31858,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.00583
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076353881777180731, guid: 6616f36bd995d6b42a2b770419e10710,
+        type: 3}
+      propertyPath: damage
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3076353881777180731, guid: 6616f36bd995d6b42a2b770419e10710,
         type: 3}
@@ -48412,7 +48422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRate: 1
   damage: 1
-  range: 10
+  range: 25
   player: {fileID: 0}
   anim: {fileID: 5676043956055316142}
   source: {fileID: 138136358}
