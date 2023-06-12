@@ -28,11 +28,13 @@ public class New_Fps : MonoBehaviour
     public move_npc npc3;
     public move_npc npc4;
     public move_npc npc5;
+    public GameObject hint_object;
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = Maxhealth;
         hb.SetMaxHealth(Maxhealth);
+        hint_object.SetActive(false);
     }
 
     // Update is called once per frame
@@ -88,6 +90,15 @@ public class New_Fps : MonoBehaviour
             npc3.GetComponent<move_npc>().SetDestination = true;
             npc5.GetComponent<move_npc>().SetDestination = true;
             npc4.GetComponent<move_npc>().SetDestination = true;
+            hint_object.SetActive(false);
+        }
+    }
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if(hit.collider.CompareTag("hint"))
+        {
+            hit.collider.gameObject.SetActive(false);
+            hint_object.SetActive(true);
         }
     }
     public void TakeDamage()
