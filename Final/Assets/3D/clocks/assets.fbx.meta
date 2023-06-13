@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 98bac225f732a8c4c9832a3766b16bc9
+guid: 7ef3132a7f58fe14980c5750b5db6f6d
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -7,8 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: WoodBarn
-    second: {fileID: 2100000, guid: b47ab50ea629e2b428949717e916ca39, type: 2}
+      name: MetalClock
+    second: {fileID: 2100000, guid: 74ff0b7223f570047b476df225842f1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodClocks
+    second: {fileID: 2100000, guid: 4514cd335628ae347b4246bdc6dbb502, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: clock
+    second: {fileID: 2100000, guid: dfe1e51fb0f0564448c7f2bcdcf15dbd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glassClock
+    second: {fileID: 2100000, guid: d7b3f4f2ca52cc341b0405a2d09fd15c, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
