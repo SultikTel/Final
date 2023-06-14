@@ -10,6 +10,7 @@ public class WaveController : MonoBehaviour
     int numEnemiesRightNow;
     public Text WaveText;
     public GameObject WaveTextGameObject;
+    public GameObject button;
     void Start()
     {
         index = 0;
@@ -17,6 +18,7 @@ public class WaveController : MonoBehaviour
         teams[2].SetActive(false);
         numEnemiesRightNow = teams[index].transform.childCount;
         WaveTextGameObject.SetActive(false);
+        button.SetActive(false);
     }
 
     public void EnemyDead()
@@ -34,6 +36,8 @@ public class WaveController : MonoBehaviour
         }else {
             WaveText.text = "All wave is passed";
             StartCoroutine(ShowText());
+            button.SetActive(true);
+            Time.timeScale = 0f;
         }
       }
     }

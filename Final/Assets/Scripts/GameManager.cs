@@ -23,9 +23,13 @@ public class GameManager : MonoBehaviour
 
     public void NexLevel()
     {
-        SceneManager.LoadScene(2); //button to open next level
+        SceneManager.LoadScene(3); //button to open first mission
     }
 
+    public void SecondMission()
+    {
+        SceneManager.LoadScene(5); //button to open second mission
+    }
     void Update()
     {
         ChangeWeapon();   //code by Ramazan dont'touch
