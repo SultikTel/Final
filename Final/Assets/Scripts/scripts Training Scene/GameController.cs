@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour
     }
     public void NextLevel() 
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
     // Update is called once per frame
     void Update()
