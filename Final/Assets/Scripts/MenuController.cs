@@ -117,6 +117,7 @@ public class MenuController : MonoBehaviour
     {
         mainControllerSen = Mathf.RoundToInt(sensitivity);
         ControllerSenTextValue.text = sensitivity.ToString("0");
+        PlayerPrefs.SetFloat("sensitivity", sensitivity);
     }
 
     public void GameplayApply()
