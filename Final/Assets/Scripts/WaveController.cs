@@ -37,7 +37,7 @@ public class WaveController : MonoBehaviour
             WaveText.text = "All wave is passed";
             StartCoroutine(ShowText());
             button.SetActive(true);
-            Time.timeScale = 0f;
+            //Time.timeScale = 0f;
         }
       }
     }
