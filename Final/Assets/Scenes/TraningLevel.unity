@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1381090357}
-  m_IndirectSpecularColor: {r: 0.26835054, g: 0.46414602, b: 0.6142413, a: 1}
+  m_IndirectSpecularColor: {r: 0.26792946, g: 0.4639346, b: 0.6143906, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10379,10 +10379,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenuUI
       objectReference: {fileID: 0}
+    - target: {fileID: 597827658559446893, guid: 17568bee0fb7bd445a3f85a54cc2eb9d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 597827659149443376, guid: 17568bee0fb7bd445a3f85a54cc2eb9d,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 597827659632807736, guid: 17568bee0fb7bd445a3f85a54cc2eb9d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c30e4b8e61e06c49b77f54e377e7eb7,
+        type: 3}
+    - target: {fileID: 597827659632807739, guid: 17568bee0fb7bd445a3f85a54cc2eb9d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 833.2817
+      objectReference: {fileID: 0}
+    - target: {fileID: 597827659632807739, guid: 17568bee0fb7bd445a3f85a54cc2eb9d,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 254.20154
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17568bee0fb7bd445a3f85a54cc2eb9d, type: 3}
