@@ -13,6 +13,7 @@ TagManager:
   - points
   - germans
   - hint
+  - door
   layers:
   - Default
   - TransparentFX
