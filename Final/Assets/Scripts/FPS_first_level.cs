@@ -113,5 +113,10 @@ public class FPS_first_level : MonoBehaviour
                 GameObject door = GameObject.Find("OpenDoor");
                 door.GetComponent<Animator>().SetBool("Open_door", true);
         }
+        if(hit.collider.CompareTag("MedKit"))
+        {
+                currentHealth = maxHealth;
+                hb.SetHealth(currentHealth);
+        }
     }
 }
