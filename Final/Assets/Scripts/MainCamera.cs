@@ -12,7 +12,7 @@ public class MainCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mouseSensitivity = PlayerPrefs.GetFloat("sensitivity");
+        //mouseSensitivity = PlayerPrefs.GetFloat("sensitivity");
     }
 
     // Update is called once per frame

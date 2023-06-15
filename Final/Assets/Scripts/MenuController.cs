@@ -113,10 +113,10 @@ public class MenuController : MonoBehaviour
         StartCoroutine(ConfirmationBox());
     }
 
-    public void SetControllerSen(float sensitivity)
+   public void SetControllerSen(float sensitivity)
     {
         mainControllerSen = Mathf.RoundToInt(sensitivity);
-        ControllerSenTextValue.text = sensitivity.ToString("0");
+        ControllerSenTextValue.text = sensitivity.ToString("4");
         PlayerPrefs.SetFloat("sensitivity", sensitivity);
     }
 
@@ -132,12 +132,6 @@ public class MenuController : MonoBehaviour
         PlayerPrefs.SetFloat("masterSen", mainControllerSen);
         StartCoroutine(ConfirmationBox());
     }
-
-   /* public void SetBrightness(float brightness)
-    {
-        _brightnessLevel = brightness;
-        brightnessTextValue.text = brightness.ToString("0.0");
-    }*/
 
     public void SetFullScreen(bool isFullScreen)
     {
