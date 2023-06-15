@@ -1,9 +1,24 @@
 fileFormatVersion: 2
-guid: 37b0d6905c757764eabfac4caf8d5b73
+guid: 2aa0695b86d58204d867e06cf053cf3c
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CandleBase
+    second: {fileID: 2100000, guid: 3ab3fbbd73345d04dac447799f098f8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Verevka
+    second: {fileID: 2100000, guid: 8629bb06d1aceed43a48aa84bd73201f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodForCandle
+    second: {fileID: 2100000, guid: 2609e29e1b553fe47b6348cbbe9bb92f, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
