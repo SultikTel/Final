@@ -27,6 +27,7 @@ public class FPS_first_level : MonoBehaviour
     public HealthBar hb;
     public Image blood;
     Color alphaColor;
+    public GameObject door_model;
     // Start is called before the first frame update
     void Start()
     {
@@ -110,8 +111,9 @@ public class FPS_first_level : MonoBehaviour
         
         if(hit.collider.CompareTag("door"))
         {
-                GameObject door = GameObject.Find("OpenDoor");
-                door.GetComponent<Animator>().SetBool("Open_door", true);
+                print("rabotaet");
+                //GameObject door_model = GameObject.Find("OpenDoor");
+                door_model.GetComponent<Animator>().SetBool("Open_door", true);
         }
         if(hit.collider.CompareTag("MedKit"))
         {
