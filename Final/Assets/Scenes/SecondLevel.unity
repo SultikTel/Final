@@ -1591,7 +1591,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1740877516}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &95733711
+--- !u!65 &95733714
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4915,7 +4915,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1653132784}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &330917971
+--- !u!136 &330917974
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7632,7 +7632,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 4.33
+  m_Intensity: 2.47
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -13152,7 +13152,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1599953329}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &853906448
+--- !u!65 &853906451
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
