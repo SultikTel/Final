@@ -5,9 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float fireRate = 1f;
-    public float damage = 1f;
-    public float range = 10f;
-    public Transform player;
+    public float damage;
     public Animator anim;
     private float nextFireTime = 0f;
     public AudioSource source;
@@ -30,7 +28,7 @@ public class Enemy : MonoBehaviour
     public void ShootEnemy() 
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, range)) {
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 100f)) {
             if (hit.transform.CompareTag("Player")) {
                 anim.SetBool("shoot_enemy", true);
                 hit.transform.GetComponent<FPS_first_level>().TakeDamage();

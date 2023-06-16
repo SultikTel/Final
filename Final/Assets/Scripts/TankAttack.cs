@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class TankAttack : MonoBehaviour
 {
-   public float fireRate = 2f;
-    public float damage = 1f;
-    public float range = 25f;
-    public Transform player;
+    public float fireRate = 2f;
+    public float damage = 10f;
     private float nextFireTime = 0f;
     public AudioSource source;
     public AudioClip fire_sound;
@@ -29,11 +27,11 @@ public class TankAttack : MonoBehaviour
     public void ShootEnemy() 
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, range)) {
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 100)) {
             fire.Play();
             PlaySound();
             if (hit.transform.CompareTag("Player")) {
-                hit.transform.GetComponent<FPS_first_level>().TakeDamage();
+                hit.transform.GetComponent<FPS_first_level>().TakeDamageFromTank(damage);
             }else{
             FPS_first_level first_person_shooter = hit.transform.GetComponent<FPS_first_level>();
             if(first_person_shooter != null)

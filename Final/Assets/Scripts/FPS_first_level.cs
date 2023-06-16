@@ -84,6 +84,16 @@ public class FPS_first_level : MonoBehaviour
             Die();
         }
     }
+    public void TakeDamageFromTank(float damage)
+    {
+        currentHealth -= damage;
+        hb.SetHealth(currentHealth);
+        StartCoroutine(BloodEffect());
+        if(currentHealth <= 0)
+        {
+            Die();
+        }
+    }
     void Die()
     {
         print("Player is dead");
