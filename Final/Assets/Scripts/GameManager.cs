@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
 
     public void SecondMission()
     {
-        SceneManager.LoadScene(6); //button to open second mission
+        SceneManager.LoadScene(5); //button to open second mission
     }
     void Update()
     {
