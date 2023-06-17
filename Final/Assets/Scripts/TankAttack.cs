@@ -5,7 +5,7 @@ using UnityEngine;
 public class TankAttack : MonoBehaviour
 {
     public float fireRate = 2f;
-    public float damage = 10f;
+    public float damage;
     private float nextFireTime = 0f;
     public AudioSource source;
     public AudioClip fire_sound;

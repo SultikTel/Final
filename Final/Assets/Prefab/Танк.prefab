@@ -5313,7 +5313,7 @@ GameObject:
   - component: {fileID: 7603251193048226282}
   - component: {fileID: 7603251193048226281}
   - component: {fileID: 5455712689546612579}
-  - component: {fileID: 1464188125}
+  - component: {fileID: 1934347413}
   m_Layer: 0
   m_Name: "\u0422\u0430\u043D\u043A"
   m_TagString: Panzer
@@ -5404,7 +5404,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.95, y: 1.26, z: 3.46}
   m_Center: {x: 0, y: 0.73, z: 0}
---- !u!114 &1464188125
+--- !u!114 &1934347413
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5417,7 +5417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 2
-  damage: 10
+  damage: 20
   source: {fileID: 0}
   fire_sound: {fileID: 8300000, guid: 78e4e15d7b1483e4eac6a81ce2b98d5d, type: 3}
   hurt_sound: {fileID: 8300000, guid: b3a494140c556b04386b2dd436ccfd84, type: 3}

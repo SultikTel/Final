@@ -28,11 +28,11 @@ public class Enemy : MonoBehaviour
     public void ShootEnemy() 
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 100f)) {
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 200f)) {
+            PlaySound();
             if (hit.transform.CompareTag("Player")) {
                 anim.SetBool("shoot_enemy", true);
                 hit.transform.GetComponent<FPS_first_level>().TakeDamage();
-                PlaySound();
             }else
             anim.SetBool("shoot_enemy", false);
             FPS_first_level fps = hit.transform.GetComponent<FPS_first_level>();

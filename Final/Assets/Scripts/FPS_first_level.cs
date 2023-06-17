@@ -19,7 +19,7 @@ public class FPS_first_level : MonoBehaviour
     public GameObject bazooka;
     public AudioSource source;
     public AudioClip sound_reload;
-
+    public AudioClip first_aid_kit;
     //Health script
     public float maxHealth = 100f;
     public float currentHealth = 0f;
@@ -28,12 +28,14 @@ public class FPS_first_level : MonoBehaviour
     public Image blood;
     Color alphaColor;
     public GameObject door_model;
+    public GameObject hint_text;
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
         alphaColor = blood.color;
         hb.SetHealth(currentHealth);
+        hint_text.SetActive(false);
     }
 
     // Update is called once per frame
@@ -127,8 +129,20 @@ public class FPS_first_level : MonoBehaviour
         }
         if(hit.collider.CompareTag("MedKit"))
         {
+            StartCoroutine(show_hint());
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                hint_text.SetActive(false);
+                source.PlayOneShot(first_aid_kit);
                 currentHealth = maxHealth;
                 hb.SetHealth(currentHealth);
+            }
         }
+    }
+    IEnumerator show_hint()
+    {
+        hint_text.SetActive(true);
+        yield return new WaitForSeconds(2.5f);
+        hint_text.SetActive(false);
     }
 }
