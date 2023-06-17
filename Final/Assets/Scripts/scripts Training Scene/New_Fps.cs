@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class New_Fps : MonoBehaviour
 {
     public float speed;
@@ -22,7 +22,8 @@ public class New_Fps : MonoBehaviour
     public float Maxhealth = 100;
     public float currentHealth;
     public HealthBar hb;
-
+    public Image blood;
+    Color alphaColor;
     public move_npc npc1;
     public move_npc npc2;
     public move_npc npc3;
@@ -35,6 +36,7 @@ public class New_Fps : MonoBehaviour
         currentHealth = Maxhealth;
         hb.SetMaxHealth(Maxhealth);
         hint_object.SetActive(false);
+        alphaColor = blood.color;
     }
 
     // Update is called once per frame
@@ -105,8 +107,17 @@ public class New_Fps : MonoBehaviour
     {
         currentHealth -= damage;
         hb.SetHealth(currentHealth);
+        StartCoroutine(BloodEffect());
         if(currentHealth <= 0){
             print("Игрок умер");
         }
+    }
+    IEnumerator BloodEffect()
+    {
+        alphaColor.a += .1f;
+        blood.color = alphaColor;
+        yield return new WaitForSeconds(3f);
+        alphaColor.a -= .1f;
+        blood.color = alphaColor;
     }
 }
