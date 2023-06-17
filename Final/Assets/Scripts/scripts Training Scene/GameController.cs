@@ -12,7 +12,8 @@ public class GameController : MonoBehaviour
     }
     public void NextLevel() 
     {
-        SceneManager.LoadScene(3);
+        print("next scene");
+        SceneManager.LoadScene("CutScene#1");
     }
     // Update is called once per frame
     void Update()
