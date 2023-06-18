@@ -29,14 +29,16 @@ public class Enemy : MonoBehaviour
     {
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, 200f)) {
-            PlaySound();
+            //PlaySound();
             if (hit.transform.CompareTag("Player")) {
                 anim.SetBool("shoot_enemy", true);
                 hit.transform.GetComponent<FPS_first_level>().TakeDamage();
+                hit.transform.GetComponent<FPS_mobile>().TakeDamage();
             }else
             anim.SetBool("shoot_enemy", false);
             FPS_first_level fps = hit.transform.GetComponent<FPS_first_level>();
-            if(fps != null)
+            FPS_mobile fps_mobile = hit.transform.GetComponent<FPS_mobile>();
+            if(fps_mobile != null)
             {
                 source.PlayOneShot(hurt_sound);
             }

@@ -6,7 +6,7 @@ public class Soviet_Soldier_2 : MonoBehaviour
 {
     public Animator animator;
     public bool anim_bool = false;
-    public FPS_first_level fps;
+    FPS_first_level fps;
     // Start is called before the first frame update
     void Start()
     {
