@@ -70,11 +70,7 @@ public class Sniper : MonoBehaviour
              camera.transform.localPosition = new Vector3(0, 0.2367195f, 0);
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            
-            Time.timeScale = 0f;
-        }
+        
         
     }
     public void TakeDamage()
