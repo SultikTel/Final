@@ -17,9 +17,13 @@ public class sniper_fire : MonoBehaviour
     private bool isReloading = false;
     public GameObject camera_first;
     public GameObject camera_aim;
+
+
+    private bool onPause;
     // Start is called before the first frame update
     void Start()
     {
+        onPause = false;
         message1.SetActive(false);
         current_ammo = max_ammo;
         //camera_aim.SetActive(false);
@@ -27,34 +31,44 @@ public class sniper_fire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //shoot
-        if(Input.GetMouseButtonDown(0) && current_ammo > 0)
+        if (onPause == false)
         {
-            current_ammo -= 1;
-            Shoot(); //Active shoot function
-            gameManager.PlayOneShot(shoot); // sound while shooting
+            //shoot
+            if (Input.GetMouseButtonDown(0) && current_ammo > 0)
+            {
+                current_ammo -= 1;
+                Shoot(); //Active shoot function
+                gameManager.PlayOneShot(shoot); // sound while shooting
+            }
+            //Reload
+            if (isReloading)
+                return;
+            if (current_ammo == 0)
+            {
+                PlaySoundReload();
+                StartCoroutine(Reloading());
+                return;
+            }
+
+            //Aim 
+            if (Input.GetMouseButtonDown(1))
+            {
+                AimOn();
+            }
+            if (Input.GetMouseButtonUp(1))
+            {
+                Aimoff();
+            }
+
         }
-        //Reload
-        if(isReloading) 
-           return;
-        if(current_ammo == 0) 
+
+
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            PlaySoundReload();
-            StartCoroutine(Reloading());
-            return;
+
+            onPause = !onPause;
         }
-        
-       //Aim 
-       if(Input.GetMouseButtonDown(1))
-       {
-            AimOn();
-       }
-       if(Input.GetMouseButtonUp(1))
-       {
-           Aimoff();
-       }
-       
-     
+
     }
     void AimOn()
     {

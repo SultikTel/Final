@@ -8,17 +8,20 @@ public class MainCamera : MonoBehaviour
     public Transform player;
     float xRotate = 0f; //чтобы отслеживать угол поворота вокруг оси х
 
-
+    private bool onPause;
     // Start is called before the first frame update
     void Start()
     {
+        onPause = false;
         //mouseSensitivity = PlayerPrefs.GetFloat("sensitivity");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+        if (onPause == false)
+        {
             float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
             float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
 
@@ -27,7 +30,14 @@ public class MainCamera : MonoBehaviour
 
             transform.localRotation = Quaternion.Euler(xRotate, 0, 0); //для поворота камер вокруг оси X
             player.Rotate(Vector3.up * mouseX); //для поворота игрока вокруг оси Y используя входные данные от мыши MouseY
+        }
 
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+
+            onPause = !onPause;
+        }
+
+
     }
 }

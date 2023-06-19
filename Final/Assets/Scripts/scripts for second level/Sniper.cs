@@ -35,6 +35,8 @@ public class Sniper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
         float horizontal  = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
         Vector3 move = transform.right * horizontal + transform.forward * vertical;
@@ -60,11 +62,20 @@ public class Sniper : MonoBehaviour
         if(Input.GetKey(KeyCode.C))
         {
             controller.height = 1f;
+
             camera.transform.localPosition = new Vector3(0, -0.36f, 0);
         }else {
             controller.height = 2f;
+
              camera.transform.localPosition = new Vector3(0, 0.2367195f, 0);
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            
+            Time.timeScale = 0f;
+        }
+        
     }
     public void TakeDamage()
     {
