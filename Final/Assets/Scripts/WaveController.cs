@@ -31,7 +31,6 @@ public class WaveController : MonoBehaviour
             teams[index].SetActive(true); 
             WaveText.text = "Wave" + index + " is passed";  
             StartCoroutine(ShowText());
-            print(index);
             numEnemiesRightNow = teams[index].transform.childCount;
         }else {
             WaveText.text = "All wave is passed";

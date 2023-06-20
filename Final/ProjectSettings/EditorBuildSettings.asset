@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SecondLevel.unity
     guid: 7bbfa68f4dc8c9c4eafee570cfb7e355
+  - enabled: 1
+    path: Assets/Scenes/MovieCredits.unity
+    guid: fee992719f4547c4cbef313a0eacbba1
   m_configObjects: {}

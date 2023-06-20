@@ -24,7 +24,7 @@ public class HealthEnemy : MonoBehaviour
     {
         GameObject findWaves = GameObject.Find("WaveController");
         Waves wave_controller = findWaves.GetComponent<Waves>();
-        wave_controller.Enemy_death();
+        //wave_controller.Enemy_death();
         if(wave_controller!=null){
            wave_controller.Enemy_death();
         }
