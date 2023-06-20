@@ -18,12 +18,14 @@ public class gun : MonoBehaviour
     public int max_ammo = 5;
     public int damage;
     private bool isReloading = false;
+    public bool onPause;
     public Text ammo_text;
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         fire.Stop();
+        onPause = false;
         message1.SetActive(false);
         current_ammo = max_ammo;
         ammo_text.text = "Kalashnik Ammo: " + current_ammo.ToString();
@@ -31,6 +33,7 @@ public class gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(onPause == false){
         //shoot
         if(Input.GetMouseButtonDown(0) && current_ammo > 0)
         {
@@ -68,14 +71,15 @@ public class gun : MonoBehaviour
        //Aim animation
        if(Input.GetMouseButtonDown(1)){
           MainCamera.fieldOfView = 41;
-          //animator.SetBool("aim", true);
-       }else {
-          //animator.SetBool("aim", false);
        }
        if(Input.GetMouseButtonUp(1)){
           MainCamera.fieldOfView = 71;
        }
-     
+    }
+       if(Input.GetKeyDown(KeyCode.Escape))
+       {
+        onPause = !onPause;
+       }
     }
     void Shoot()
     {

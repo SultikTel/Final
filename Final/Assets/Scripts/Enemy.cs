@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     public float fireRate = 1f;
     public float damage;
     public Animator anim;
+    public Transform fps;
     private float nextFireTime = 0f;
     public AudioSource source;
     public AudioClip fire_sound;
@@ -24,21 +25,20 @@ public class Enemy : MonoBehaviour
             nextFireTime = Time.time + 1f / fireRate;
             ShootEnemy();
           }
+          transform.LookAt(fps.transform.position);
     }
     public void ShootEnemy() 
     {
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, 200f)) {
-            //PlaySound();
             if (hit.transform.CompareTag("Player")) {
                 anim.SetBool("shoot_enemy", true);
+                  PlaySound();
                 hit.transform.GetComponent<FPS_first_level>().TakeDamage();
-                hit.transform.GetComponent<FPS_mobile>().TakeDamage();
             }else
             anim.SetBool("shoot_enemy", false);
             FPS_first_level fps = hit.transform.GetComponent<FPS_first_level>();
-            FPS_mobile fps_mobile = hit.transform.GetComponent<FPS_mobile>();
-            if(fps_mobile != null)
+            if(fps != null)
             {
                 source.PlayOneShot(hurt_sound);
             }

@@ -38,13 +38,13 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1381090357}
-  m_IndirectSpecularColor: {r: 0.41227052, g: 0.48922747, b: 0.60328126, a: 1}
+  m_IndirectSpecularColor: {r: 0.41227227, g: 0.48922974, b: 0.60328454, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -10671,6 +10671,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PauseMenuUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 597827658541508080, guid: 17568bee0fb7bd445a3f85a54cc2eb9d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 597827658559446893, guid: 17568bee0fb7bd445a3f85a54cc2eb9d,
         type: 3}
@@ -45814,6 +45819,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 4
   player: {fileID: 8614223772741766413}
+  onPause: 0
 --- !u!1 &8602634997471760309
 GameObject:
   m_ObjectHideFlags: 0
@@ -51609,6 +51615,7 @@ MonoBehaviour:
   current_ammo: 0
   max_ammo: 12
   damage: 10
+  onPause: 0
   ammo_text: {fileID: 135451385}
 --- !u!95 &8884114632912626831
 Animator:

@@ -8,7 +8,7 @@ public class MainCamera : MonoBehaviour
     public Transform player;
     float xRotate = 0f; //чтобы отслеживать угол поворота вокруг оси х
 
-    private bool onPause;
+    public bool onPause;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,10 +34,7 @@ public class MainCamera : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-
             onPause = !onPause;
         }
-
-
     }
 }
