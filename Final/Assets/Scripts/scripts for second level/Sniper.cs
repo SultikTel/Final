@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class Sniper : MonoBehaviour
 {
     public float speed;
@@ -23,12 +24,18 @@ public class Sniper : MonoBehaviour
     public HealthBar hb;
     public Image blood;
     Color alphaColor;
+
+    public Image goBlack;
+    public Animator imageAnimator;
+    public bool isDead;
     // Start is called before the first frame update
     void Start()
     {
+        imageAnimator = goBlack.GetComponent<Animator>();
         currentHealth = maxHealth;
         alphaColor = blood.color;
         hb.SetHealth(currentHealth);
+        isDead = false;
     }
 
     // Update is called once per frame
@@ -84,7 +91,15 @@ public class Sniper : MonoBehaviour
     }
     void Die()
     {
-        print("Player is dead");
+        if (isDead == false)
+        {
+            print("Player is dead");
+            imageAnimator.SetTrigger("GoBlack");
+            isDead = true;
+        }
+        StartCoroutine(DeadGoBlack());
+
+
     }
     IEnumerator BloodEffect()
     {
@@ -93,6 +108,13 @@ public class Sniper : MonoBehaviour
         yield return new WaitForSeconds(5f);
         alphaColor.a -= .1f;
         blood.color = alphaColor;
+    }
+
+    IEnumerator DeadGoBlack()
+    {
+        
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
 
