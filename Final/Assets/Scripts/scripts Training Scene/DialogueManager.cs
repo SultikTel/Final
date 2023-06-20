@@ -6,64 +6,26 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     public AudioSource audioSource;
-    public Text dialogue;
-    public string[] sentences;
-    float speedText = 2f;
     public AudioClip[] clips;
-    int index = 0;
+    int currentIndexSound;
     // Start is called before the first frame update
     void Start()
     {
-        StartDialogue();
     }
     void Update()
     {
-        EnterNewText();
-    }
-
-    IEnumerator TypeSentences()
-    {
-        foreach(char c in sentences[index].ToCharArray())
-        {   
-            dialogue.text += c;
-            yield return new WaitForSeconds(speedText);
+        if(audioSource.isPlaying == false)
+        {
+            NexSound();
         }
     }
-
-    public void StartDialogue()
+    void NexSound()
     {
-        dialogue.text = string.Empty;
-        index = 0;
-        StartCoroutine(TypeSentences());
-        audioSource.PlayOneShot(clips[index]);
-    }
-
-    public void NextSentences()
-    {
-        if(index < sentences.Length - 1)
+        if(currentIndexSound < clips.Length)
         {
-            index++;
-            dialogue.text = string.Empty;
-            StartCoroutine(TypeSentences());
-            audioSource.PlayOneShot(clips[index]);
-        }else 
-        {
-            gameObject.SetActive(false);
-        }
-    }
-    public void EnterNewText()
-    {
-        if(dialogue.text.Length == sentences[index].Length)
-        {
-            if(Input.GetKeyDown(KeyCode.Return))
-            {
-               print("Enter is working");
-               NextSentences();
-            }
-        }
-        else {
-            StopAllCoroutines();
-            dialogue.text = sentences[index];
+            audioSource.clip = clips[currentIndexSound];
+            audioSource.Play();
+            currentIndexSound++;
         }
     }
 }

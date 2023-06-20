@@ -20,6 +20,7 @@ public class FPS_first_level : MonoBehaviour
     public AudioSource source;
     public AudioClip sound_reload;
     public AudioClip first_aid_kit;
+    public AudioClip jump_sound;
     //Health script
     public float maxHealth = 100f;
     public float currentHealth = 0f;
@@ -52,6 +53,7 @@ public class FPS_first_level : MonoBehaviour
             {
                 isJumping = true;
                 jumpVelocity = Mathf.Sqrt(-2.0f * gravity * jumpHeight);
+                source.PlayOneShot(jump_sound);
             }
             if (isGrounded && velocity.y > 10f)
             {

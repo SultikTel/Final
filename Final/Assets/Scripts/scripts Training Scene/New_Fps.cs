@@ -16,8 +16,8 @@ public class New_Fps : MonoBehaviour
     private Vector3 velocity;
     public Transform G_O;
     public Camera cam;
-
-    public AudioClip clip;
+    public AudioSource source;
+    public AudioClip jump_sound;
     public Animator animator;
     public float Maxhealth = 100;
     public float currentHealth;
@@ -56,6 +56,7 @@ public class New_Fps : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             isJumping = true;
+            source.PlayOneShot(jump_sound);
             jumpVelocity = Mathf.Sqrt(-2.0f * gravity * jumpHeight);
         }
 
