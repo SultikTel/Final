@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     public float fireRate = 1f;
-    public float damage = 1f;
+    //public float damage = 1f;
     public float range;
     public Transform player;
     public Animator anim;

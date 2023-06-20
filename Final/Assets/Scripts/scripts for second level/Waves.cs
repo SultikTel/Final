@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Waves : MonoBehaviour
 {
     public GameObject[] teams_enemy;
     int index;
     int numsEnemiesRightNow;
+    public Text tasks;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,9 @@ public class Waves : MonoBehaviour
                index++;
                teams_enemy[index].SetActive(true);
                print("First wave is passed");
+               tasks.text = index + " wave is passed.";
+            }else {
+               tasks.text = " All wave is passed.";
             }
         }
     }

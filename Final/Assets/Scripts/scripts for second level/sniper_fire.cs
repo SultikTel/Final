@@ -9,16 +9,11 @@ public class sniper_fire : MonoBehaviour
     public AudioSource gameManager;
     public AudioClip shoot;
     public AudioClip sound2;
-    public AudioSource walking_sound;
     public GameObject message1;
     public int current_ammo;
     public int max_ammo;
     public int damage;
     private bool isReloading = false;
-    public GameObject camera_first;
-    public GameObject camera_aim;
-
-
     private bool onPause;
     // Start is called before the first frame update
     void Start()
@@ -26,7 +21,6 @@ public class sniper_fire : MonoBehaviour
         onPause = false;
         message1.SetActive(false);
         current_ammo = max_ammo;
-        //camera_aim.SetActive(false);
     }
     // Update is called once per frame
     void Update()
@@ -50,16 +44,6 @@ public class sniper_fire : MonoBehaviour
                 return;
             }
 
-            //Aim 
-            if (Input.GetMouseButtonDown(1))
-            {
-                AimOn();
-            }
-            if (Input.GetMouseButtonUp(1))
-            {
-                Aimoff();
-            }
-
         }
 
 
@@ -69,16 +53,6 @@ public class sniper_fire : MonoBehaviour
             onPause = !onPause;
         }
 
-    }
-    void AimOn()
-    {
-       camera_aim.SetActive(true); 
-       camera_first.SetActive(false);
-    }
-    void Aimoff()
-    {
-       camera_first.SetActive(true);
-       camera_aim.SetActive(false); 
     }
     void Shoot()
     {

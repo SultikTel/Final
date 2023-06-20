@@ -4,9 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Sniper : MonoBehaviour
 {
-   public float speed;
+    public float speed;
     private float jumpHeight = 1.0f;
-    //private float jumpTime = 0.5f;
     private float groundDistance = 0.2f;
     public LayerMask groundMask;
     public bool isJumping = false;
@@ -20,7 +19,7 @@ public class Sniper : MonoBehaviour
     //Health script
     public float maxHealth = 100f;
     public float currentHealth = 0f;
-    public float damage = 1f;
+    public float damage;
     public HealthBar hb;
     public Image blood;
     Color alphaColor;
