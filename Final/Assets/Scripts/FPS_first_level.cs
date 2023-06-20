@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FPS_first_level : MonoBehaviour
 {
@@ -30,13 +31,20 @@ public class FPS_first_level : MonoBehaviour
     Color alphaColor;
     public GameObject door_model;
     public GameObject hint_text;
+
+    public Image goBlack;
+    public Animator imageAnimator;
+    public bool isDead;
     // Start is called before the first frame update
     void Start()
     {
+
+        imageAnimator = goBlack.GetComponent<Animator>();
         currentHealth = maxHealth;
         alphaColor = blood.color;
         hb.SetHealth(currentHealth);
         hint_text.SetActive(false);
+        isDead = false;
     }
 
     // Update is called once per frame
@@ -100,7 +108,13 @@ public class FPS_first_level : MonoBehaviour
     }
     void Die()
     {
-        print("Player is dead");
+        if (isDead == false)
+        {
+            print("Player is dead");
+            imageAnimator.SetTrigger("GoOn");
+            isDead = true;
+        }
+        StartCoroutine(DeadGoBlack());
     }
     IEnumerator BloodEffect()
     {
@@ -146,5 +160,12 @@ public class FPS_first_level : MonoBehaviour
         hint_text.SetActive(true);
         yield return new WaitForSeconds(2.5f);
         hint_text.SetActive(false);
+    }
+
+    IEnumerator DeadGoBlack()
+    {
+
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
