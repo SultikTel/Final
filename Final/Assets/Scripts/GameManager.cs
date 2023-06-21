@@ -20,12 +20,6 @@ public class GameManager : MonoBehaviour
     {
         source.PlayOneShot(sound); //play sound 
     }
-
-    public void NexLevel()
-    {
-        SceneManager.LoadScene(3); //button to open first mission
-    }
-
     public void SecondMission()
     {
         SceneManager.LoadScene(5); //button to open second mission
