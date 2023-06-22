@@ -30,6 +30,8 @@ public class New_Fps : MonoBehaviour
     public move_npc npc4;
     public move_npc npc5;
     public GameObject hint_object;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -80,7 +82,7 @@ public class New_Fps : MonoBehaviour
         if(Input.GetKey(KeyCode.C))
         {
             controller.height = 1f;
-            cam.transform.localPosition = new Vector3(0, -0.36f, 0);
+            cam.transform.localPosition = new Vector3(0, -0.06f, 0);
         }else {
             controller.height = 2f;
              cam.transform.localPosition = new Vector3(0, 0.2367195f, 0);

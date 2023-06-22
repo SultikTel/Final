@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     //Here edited by Ramazan, don't touch!
     void ChangeWeapon()
     {
-        if(Input.GetKeyDown(KeyCode.Keypad2))
+        if(Input.GetKeyDown(KeyCode.Alpha2))
         {
             second_weapon.SetActive(true);
             first_weapon.SetActive(false);
@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
             first_weapon.GetComponent<gun>().message1.SetActive(false);
             first_weapon.GetComponent<gun>().ammo_text.enabled = false;
             source.PlayOneShot(weapon_switch);
-        }else if(Input.GetKeyDown(KeyCode.Keypad1))
+        }else if(Input.GetKeyDown(KeyCode.Alpha1))
         {
             second_weapon.SetActive(false);
             first_weapon.SetActive(true);
