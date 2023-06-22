@@ -103,8 +103,14 @@ public class New_Fps : MonoBehaviour
         if(hit.collider.CompareTag("hint"))
         {
             hit.collider.gameObject.SetActive(false);
-            hint_object.SetActive(true);
+            StartCoroutine(Show_hint());
         }
+    }
+    IEnumerator Show_hint()
+    {
+        hint_object.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        hint_object.SetActive(false);
     }
     public void TakeDamage()
     {

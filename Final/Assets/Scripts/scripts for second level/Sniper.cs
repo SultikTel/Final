@@ -69,7 +69,7 @@ public class Sniper : MonoBehaviour
         {
             controller.height = 1f;
 
-            camera.transform.localPosition = new Vector3(0, -0.36f, 0);
+            camera.transform.localPosition = new Vector3(0, -0.16f, 0);
         }else {
             controller.height = 2f;
 

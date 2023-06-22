@@ -10,8 +10,6 @@ public class FPS_mobile : MonoBehaviour
     public Camera main_camera;
     private bool isJumping;
     private float gravity = 10f;
-    private float jumpTimer = 0f;
-    private float jumpTime = 1f;
     private float jumpHeight = 6f;
     private float verticalspeed;
     public GameObject bazooka;
