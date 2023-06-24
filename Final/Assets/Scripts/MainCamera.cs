@@ -9,6 +9,11 @@ public class MainCamera : MonoBehaviour
     float xRotate = 0f; //чтобы отслеживать угол поворота вокруг оси х
 
     public bool onPause;
+    bool isCursorVisible = false;
+    public void Awake()
+    {
+        Cursor.visible = false;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +39,21 @@ public class MainCamera : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            onPause = !onPause;
+            isCursorVisible = !isCursorVisible;
         }
+        if(isCursorVisible)
+        {
+            ShowCursor();
+        }else {
+            HideCursor();
+        }
+    }
+    void HideCursor()
+    {
+        Cursor.visible = false;
+    }
+    void ShowCursor()
+    {
+        Cursor.visible = true;
     }
 }
