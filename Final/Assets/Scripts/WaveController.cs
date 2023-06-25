@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class WaveController : MonoBehaviour
 {
     public GameObject[] teams;
@@ -35,7 +35,7 @@ public class WaveController : MonoBehaviour
         }else {
             WaveText.text = "All wave is passed";
             StartCoroutine(ShowText());
-            button.SetActive(true);
+            SceneManager.LoadScene("CutScene#2");
         }
       }
     }
