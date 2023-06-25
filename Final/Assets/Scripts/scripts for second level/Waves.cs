@@ -38,6 +38,6 @@ public class Waves : MonoBehaviour
     IEnumerator nextScene()
     {
         yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene("MovieCredits");
+        SceneManager.LoadScene("MainMenu");
     }
 }
