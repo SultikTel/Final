@@ -16,7 +16,7 @@ public class Sniper : MonoBehaviour
     private Vector3 velocity;
     public Transform CheckGround;
     public Camera camera;
-
+    public Text GetKeyE;
     //Health script
     public float maxHealth = 100f;
     public float currentHealth = 0f;
@@ -36,6 +36,7 @@ public class Sniper : MonoBehaviour
         alphaColor = blood.color;
         hb.SetHealth(currentHealth);
         isDead = false;
+        GetKeyE.enabled = false;
     }
 
     // Update is called once per frame
@@ -115,6 +116,24 @@ public class Sniper : MonoBehaviour
         
         yield return new WaitForSeconds(5f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    IEnumerator ShowGetKeyE()
+    {
+        GetKeyE.enabled = true;
+        yield return new WaitForSeconds(2f);
+        GetKeyE.enabled = false;
+    }
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if(hit.collider.CompareTag("MedKit"))
+        {
+            StartCoroutine(ShowGetKeyE());
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                currentHealth = maxHealth;
+                hb.SetHealth(currentHealth);
+            }
+        }
     }
 }
 
