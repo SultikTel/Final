@@ -31,6 +31,6 @@ public class enemy_death : MonoBehaviour
         gameObject.SetActive(false);
         NPC_Ragdoll.SetActive(true);
         Instantiate(NPC_Ragdoll, transform.position, transform.rotation);
-        SceneManager.LoadScene("TrainingLevel");
+        SceneManager.LoadScene("CutScene#1");
     }
 }
