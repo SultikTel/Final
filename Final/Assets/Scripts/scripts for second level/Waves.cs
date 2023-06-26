@@ -37,7 +37,8 @@ public class Waves : MonoBehaviour
     }
     IEnumerator nextScene()
     {
+        Cursor.visible = true;
         yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MovieCredits");
     }
 }
